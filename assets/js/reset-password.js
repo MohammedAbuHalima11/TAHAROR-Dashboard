@@ -8,22 +8,22 @@ const toggleConfirmPasswordIcon = document.getElementById('toggleConfirmPassword
 togglePasswordIcon.onclick = function () {
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        togglePasswordIcon.src = '../assets/images/eye.png';
+        togglePasswordIcon.src = '..../assets/images/eye.png';
     }
     else {
         passwordInput.type = 'password';
-        togglePasswordIcon.src = '../assets/images/eye-slash.png';
+        togglePasswordIcon.src = '..../assets/images/eye-slash.png';
     }
 }
 
 toggleConfirmPasswordIcon.onclick = function () {
     if (confirmPasswordInput.type === 'password') {
         confirmPasswordInput.type = 'text';
-        toggleConfirmPasswordIcon.src = '../assets/images/eye.png';
+        toggleConfirmPasswordIcon.src = '..../assets/images/eye.png';
     }
     else {
         confirmPasswordInput.type = 'password';
-        toggleConfirmPasswordIcon.src = '../assets/images/eye-slash.png';
+        toggleConfirmPasswordIcon.src = '..../assets/images/eye-slash.png';
     }
 }
 
