@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* إخفاء شريط التمرير للصفحة بالكامل مع بقاء ميزة التمرير تعمل */
+html,
+body {
+
+    /* لمتصفحات Chrome, Safari, Opera, و Edge الحديثة */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* لمتصفح Firefox */
+    scrollbar-width: none;
+
+    /* لمتصفحات Internet Explorer و Edge القديم */
+    -ms-overflow-style: none;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #075E66;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #075E66;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1;
+}
+
+/* الكود التالي من ال ai 
+حتى نستطيع اظهار البطاقات بشكل تدريجي للمستخدم */
+
+.stat-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stat-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-card-n {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stat-card-n.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* لاخفاء اشريط السكرول من السايدبار    */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+
+/* التحكم في شكل القائمة المنسدلة  من حقل السيليكت */
+.ts-control {
+
+    height: 30px;
+    border: none !important;
+    box-shadow: none !important;
+    /* font-size: 14px !important;
+    color: #1D2129 !important; */
+
+    text-align: right;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    background-color: white !important;
+    cursor: pointer !important;
+
+}
+
+.ts-dropdown {
+
+    border-radius: 6px !important;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    z-index: 50;
+
+}
+
+
+.ts-dropdown .option {
+
+    padding: 12px;
+
+    text-align: right;
+
+}
+
+
+.ts-dropdown .active {
+
+    background: #81C6C3 !important;
+
+    color: #075E66;
+
+}
+
+.ts-control:focus,
+.ts-wrapper.focus .ts-control {
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+}
+
+.ts-wrapper {
+    border-bottom-left-radius: 6px !important;
+}
+
+
+
+.select-field.ts-wrapper {
+    width: 100%;
+
+}
+
+.select-field .ts-control {
+    border: 1px solid #E5E6EB !important;
+    border-radius: 6px;
+    color: #86909C;
+    font-size: 16px;
+    font-weight: 300;
+    height: 41.6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: right;
+
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.select-field .ts-control:focus,
+.select-field.focus .ts-control {
+    outline: none !important;
+    border-color: #c0c7c8 !important;
+    box-shadow: none !important;
+}
+
+.select-field-edit .ts-control {
+    border: none !important;
+    color: #1D2129 !important;
+    font-weight: 400;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: right;
+
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s;
+}
