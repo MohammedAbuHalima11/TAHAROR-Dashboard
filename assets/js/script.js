@@ -508,7 +508,8 @@ if (document.querySelector('header')) {
         document.querySelector('#profile-menu-logout').classList.add('hidden');
         profile_menu_logout_btn.classList.remove('-scale-y-100');
         sidebare.classList.add('translate-x-full');
-        document.querySelector('.background-with-sidbare').classList.add('hidden')
+        document.querySelector('.background-with-sidbare').classList.add('hidden');
+        document.body.style.overflow = 'auto';
     });
 
 
@@ -518,6 +519,7 @@ if (document.querySelector('header')) {
         e.stopPropagation();
         sidebare.classList.toggle('translate-x-full');
         document.querySelector('.background-with-sidbare').classList.toggle('hidden');
+        document.body.style.overflow = 'hidden';
     }
 
     sidebare.onclick = (e) => {
