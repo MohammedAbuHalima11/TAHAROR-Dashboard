@@ -535,10 +535,12 @@ if (document.querySelector('header')) {
     searchWithMobileBtn.onclick = () => {
         searchWithMobile.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeSearchWithMobileBtn.onclick = () => {
         searchWithMobile.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 
@@ -642,11 +644,13 @@ if (customerManaementPage) {
     filteringBtn.addEventListener('click', function () {
         customerSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeCustomerSortingBtn.addEventListener('click', function () {
         customerSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
 
@@ -660,16 +664,19 @@ if (customerManaementPage) {
     addClientBtn.addEventListener('click', function () {
         addClientContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeAddClientBtn.addEventListener('click', function () {
         addClientContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
     cancleAddClientBtn.onclick = () => {
         addClientContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 
@@ -683,31 +690,14 @@ if (customerManaementPage) {
 
     searchCustomerWithMobileBtn.onclick = () => {
         searchCustomerWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeCustomerSearchWithMobileBtn.onclick = () => {
         searchCustomerWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
-
-
-
-    // //خاص بالمكتبة التي تستدعي القائمة المنسدلة 
-
-
-    // //خاص بحقول الجنس في نافدات التتصفية
-    // new TomSelect("#sex-select", {
-
-    //     create: false,
-
-    //     controlInput: null,
-
-    //     direction: "rtl",
-
-    //     onInitialize() {
-
-    //         this.wrapper.classList.add("sex-select");
-    //     }
-    // });
-
 
 
 
@@ -740,6 +730,29 @@ if (customerDetailspage) {
     document.onclick = () => {
         if (!customerOptionsMenu.classList.contains('hidden')) customerOptionsMenu.classList.add('hidden');
     }
+
+
+    // الضغط على زر الاشعارات
+    document.querySelector('.notifications-btn').onclick = () => {
+        document.querySelector('.send-notifications-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+    document.querySelector('.close-send-notifications-btn').onclick = () => {
+        document.querySelector('.send-notifications-container').classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+    document.querySelector('.cancle-send-notifications-btn').onclick = (e) => {
+        e.preventDefault();
+        document.querySelector('.send-notifications-container').classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+    
 }
 
 
