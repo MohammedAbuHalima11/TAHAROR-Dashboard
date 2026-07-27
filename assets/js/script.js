@@ -1109,11 +1109,13 @@ if (sessionsManagementPage) {
     filteringBtn.addEventListener('click', function () {
         sessionsSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeSessionsSortingBtn.addEventListener('click', function () {
         sessionsSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
 
@@ -1127,16 +1129,19 @@ if (sessionsManagementPage) {
     addSessionBtn.addEventListener('click', function () {
         addSessionsContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeAddSessionBtn.addEventListener('click', function () {
         addSessionsContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
     cancleAddSessionBtn.onclick = () => {
         addSessionsContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 
@@ -1149,10 +1154,44 @@ if (sessionsManagementPage) {
 
     searchSessionWithMobileBtn.onclick = () => {
         searchSessionWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeSessionSearchWithMobileBtn.onclick = () => {
         searchSessionWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
+
+
+    // واجهة حدف صف جلسة من الجدول
+
+    const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    deleteRowBtns.forEach(btn => {
+
+        btn.onclick = () => {
+            deleteContainer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            closeBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+            cancelBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+        }
+    })
 
 }
 
