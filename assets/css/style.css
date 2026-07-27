@@ -382,6 +382,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-\[85dvh\] {
+    max-height: 85dvh;
+  }
   .max-h-\[85vh\] {
     max-height: 85vh;
   }
