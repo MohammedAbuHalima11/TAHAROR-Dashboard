@@ -510,6 +510,8 @@ if (document.querySelector('header')) {
         sidebare.classList.add('translate-x-full');
         document.querySelector('.background-with-sidbare').classList.add('hidden');
         document.body.style.overflow = 'auto';
+
+        
     });
 
 
@@ -520,6 +522,8 @@ if (document.querySelector('header')) {
         sidebare.classList.toggle('translate-x-full');
         document.querySelector('.background-with-sidbare').classList.toggle('hidden');
         document.body.style.overflow = 'hidden';
+        
+        if (!profile_menu_logout.classList.contains('hidden')) profile_menu_logout.classList.add('hidden');
     }
 
     sidebare.onclick = (e) => {
