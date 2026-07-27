@@ -826,9 +826,13 @@ if (specialistManaementPage) {
 
     searchSpecialistWithMobileBtn.onclick = () => {
         searchSpecialistWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeSpecialistSearchWithMobileBtn.onclick = () => {
         searchSpecialistWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
     const actionButtons = document.querySelectorAll('.table-action-btn');
