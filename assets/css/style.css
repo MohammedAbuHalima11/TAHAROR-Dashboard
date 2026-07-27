@@ -418,6 +418,9 @@
   .max-h-\[90dvh\] {
     max-height: 90dvh;
   }
+  .max-h-\[95dvh\] {
+    max-height: 95dvh;
+  }
   .max-h-\[99vh\] {
     max-height: 99vh;
   }
