@@ -759,7 +759,33 @@ if (customerDetailspage) {
         document.documentElement.style.overflow = '';
     }
 
+}
 
+
+//======================================================================================//
+// edite customer details page
+
+
+if (document.getElementById('edite-customer-details-page')) {
+    // الضغط على زر الاشعارات
+    document.querySelector('.notifications-btn').onclick = () => {
+        document.querySelector('.send-notifications-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+    document.querySelector('.close-send-notifications-btn').onclick = () => {
+        document.querySelector('.send-notifications-container').classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+    document.querySelector('.cancle-send-notifications-btn').onclick = (e) => {
+        e.preventDefault();
+        document.querySelector('.send-notifications-container').classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
 }
 
 
