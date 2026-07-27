@@ -4,11 +4,13 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
     <!-- Flatpickr Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <!-- tom-select -->
     <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +27,11 @@
             font-family: 'Tajawal', sans-serif !important;
         }
     </style>
-    <title>إدارة الأخصائيين </title>
+    <title>إدارة العملاء</title>
 </head>
 
-<body id="specialist-management-page">
-    <div class="container-page min-h-screen flex flex-row relative">
+<body id="customer-management-page">
+    <div class="container-page min-h-screen flex flex-row ">
         <aside
             class="fixed lg:sticky top-0 right-0 z-50 h-screen w-56 bg-[#075E66] pt-4 overflow-y-auto scrollbar-hide transition-transform duration-300 translate-x-full lg:translate-x-0">
             <div class="w-full flex justify-center py-4">
@@ -468,8 +470,8 @@
                     <div class="relative">
                         <input type="text" name="search" id="search" placeholder="إبحث عن أي شيء داخل المنصة"
                             class="hidden sm:block bg-white border border-[#E5E6EB] sm:w-100 h-11 rounded-lg pr-10 pl-3 focus:outline-none focus:ring-1 focus:ring-[#c0c7c8]
-                                                                                                                               transition-all duration-300 ease-in-out
-                                                                                                                               placeholder:text-[#86909C] placeholder:font-medium placeholder:text-lg">
+                                                                                                                   transition-all duration-300 ease-in-out
+                                                                                                                   placeholder:text-[#86909C] placeholder:font-medium placeholder:text-lg">
                         <svg class="hidden sm:block sm:absolute right-3 top-1/2 sm:-translate-y-1/2 "
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -567,7 +569,7 @@
                             <div class="relative flex-1">
                                 <input type="text" name="search" id="search" placeholder="إبحث عن أي شيء داخل المنصة"
                                     class="bg-white  w-full h-11 rounded-lg pr-10 pl-3 
-                                                                                                                                                           placeholder:text-[#86909C] placeholder:font-medium placeholder:text-xs focus:outline-none focus:ring-0 ">
+                                                                                                                                               placeholder:text-[#86909C] placeholder:font-medium placeholder:text-xs focus:outline-none focus:ring-0 ">
                                 <svg class="absolute right-4 top-1/2 -translate-y-1/2 "
                                     xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                     fill="none">
@@ -598,7 +600,8 @@
                 </div>
             </header>
             <main>
-                <div class="main-wrraper flex flex-col gap-4 p-6 min-w-0">
+                <div class="main-wrraper flex flex-col gap-4 m-6 min-w-0">
+                    <!-- info -->
                     <section class="info flex flex-col gap-2.5">
                         <div class="flex flex-row items-center gap-2">
 
@@ -658,12 +661,14 @@
                             </svg>
 
                             <p class="text-[#075E66] font-bold text-base sm:text-xl">
-                                إدارة الأخصائيين <span class="text-[#86909C] font-normal text-xs sm:text-sm">( 154
-                                    أخصائي)</span>
+                                إدارة العملاء <span class="text-[#86909C] font-normal text-xs sm:text-sm">(245
+                                    عميل)</span>
                             </p>
                         </div>
-                        <p class="text-[#86909C] font-medium text-xs sm:text-sm">إستعراض كافة الأخصائيين</p>
+                        <p class="text-[#86909C] font-medium text-xs sm:text-sm">إستعراض كافة العملاء</p>
                     </section>
+
+                    <!-- tools -->
                     <section class="tools flex flex-row  justify-between items-center">
                         <div class="flex flex-row items-center gap-2.5 sm:gap-4">
                             <button id="filtering-btn"
@@ -689,7 +694,7 @@
                                 <span class="text-[#86909C] text-xs sm:text-base font-medium">تصفية</span>
                             </button>
                             <button
-                                class="search-specialist-with-mobile-btn bg-[#F9FAFB] relative border h-11 border-[#E5E6EB]  rounded-lg p-2 flex flex-row gap-1 items-center cursor-pointer sm:hidden">
+                                class="search-customer-with-mobile-btn bg-[#F9FAFB] relative border h-11 border-[#E5E6EB]  rounded-lg p-2 flex flex-row gap-1 items-center cursor-pointer sm:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                     fill="none">
                                     <path
@@ -699,13 +704,13 @@
                                     <path d="M22 22L20 20" stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="text-[#86909C] text-xs sm:text-base font-medium">البحث عن أخصائي</span>
+                                <span class="text-[#86909C] text-xs sm:text-base font-medium">البحث عن عميل</span>
                             </button>
                             <div class="relative">
-                                <input type="text" name="search" id="search" placeholder="البحث عن أخصائي..."
+                                <input type="text" name="search" id="search" placeholder="البحث عن عميل..."
                                     class="hidden  sm:block bg-white border border-[#E5E6EB] sm:w-72 md:w-96 h-11 rounded-lg pr-10 pl-3 focus:outline-none focus:ring-1 focus:ring-[#c0c7c8]
-                                                                                                                                           transition-all duration-300 ease-in-out
-                                                                                                                                           placeholder:text-[#86909C] placeholder:font-medium placeholder:text-sm">
+                                                                                                                       transition-all duration-300 ease-in-out
+                                                                                                                       placeholder:text-[#86909C] placeholder:font-medium placeholder:text-sm">
                                 <svg class="hidden sm:block sm:absolute right-3 top-1/2 sm:-translate-y-1/2 "
                                     xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                     fill="none">
@@ -718,7 +723,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <button id="add-specialist-btn"
+                        <button id="add-client-btn"
                             class="bg-[#075E66]  rounded-lg flex flex-row  items-center gap-0.5 sm:gap-2.5 p-3 cursor-pointer active:scale-95 transition-all duration-300">
                             <svg class="hidden sm:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                 viewBox="0 0 20 20" fill="none">
@@ -734,9 +739,11 @@
                                 <path d="M10 15V5" stroke="white" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span class="text-white text-xs sm:text-base hidden sm:block">إضافة أخصائي</span>
+                            <span class="text-white text-xs sm:text-base hidden sm:block">إضافة عميل</span>
                         </button>
                     </section>
+
+                    <!-- table -->
                     <section>
                         <div class="bg-white p-6 border border-[#E5E6EB] rounded-xl w-full overflow-x-auto">
                             <table class=" text-right w-full min-w-[900px]">
@@ -745,9 +752,9 @@
                                         <th class="pb-4 pt-2 ">الاسم</th>
                                         <th class="pb-4 pt-2 ">البريد الإلكتروني</th>
                                         <th class="pb-4 pt-2 ">رقم الجوال</th>
-                                        <th class="pb-4 pt-2 ">التخصص</th>
-                                        <th class="pb-4 pt-2 ">الخبرة</th>
-                                        <th class="pb-4 pt-2 ">الدولة</th>
+                                        <th class="pb-4 pt-2 ">الجنس</th>
+                                        <th class="pb-4 pt-2 ">الحالة الإجتماعية</th>
+                                        <th class="pb-4 pt-2 ">تاريخ الميلاد</th>
                                         <th class="pb-4 pt-2 "></th>
                                     </tr>
                                 </thead>
@@ -759,14 +766,14 @@
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">هاشم ناجي</span>
+                                                <span class="font-medium text-base">محمد أبو حليمة</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">hashem.naji@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">059 524 9576</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">طبيب</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">15 سنة</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">السعودية</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">mohammed.abu.halima11@gmail.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0597048531</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">ذكر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أعزب للأسف</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">20/01/2004</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -775,7 +782,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -792,7 +799,95 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
+                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    <p class="font-medium text-base text-[#86909C]">تعديل</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 18 18" fill="none">
+                                                        <path
+                                                            d="M9.94501 2.69992L3.78751 9.21742C3.55501 9.46492 3.33001 9.95242 3.28501 10.2899L3.00751 12.7199C2.91001 13.5974 3.54001 14.1974 4.41001 14.0474L6.82501 13.6349C7.16251 13.5749 7.63501 13.3274 7.86751 13.0724L14.025 6.55492C15.09 5.42992 15.57 4.14742 13.9125 2.57992C12.2625 1.02742 11.01 1.57492 9.94501 2.69992Z"
+                                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M8.91748 3.7876C9.23998 5.8576 10.92 7.4401 13.005 7.6501"
+                                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M2.25 16.5H15.75" stroke="#86909C" stroke-width="1.5"
+                                                            stroke-miterlimit="10" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                                <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
+
+                                                <button
+                                                    class="delete-row-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    <p class="font-medium text-base text-[#F76560]">حذف</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 18 18" fill="none">
+                                                        <path
+                                                            d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511"
+                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275"
+                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M14.1375 6.85498L13.65 14.4075C13.5675 15.585 13.5 16.5 11.4075 16.5H6.59255C4.50005 16.5 4.43255 15.585 4.35005 14.4075L3.86255 6.85498"
+                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M7.74756 12.375H10.2451" stroke="#F76560"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M7.125 9.375H10.875" stroke="#F76560"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
+                                        <td class="py-4 ">
+                                            <div class="flex items-center gap-3">
+                                                <div class="img shrink-0 flex items-center justify-center">
+                                                    <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
+                                                        src="../assets/images/dashpord/Frame 1300193088.png">
+                                                </div>
+                                                <span class="font-medium text-base">أحمد خالد</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">ahmed.khaled@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599345678</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">ذكر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">متزوج</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">1998-11-03</td>
+                                        <td class="py-4 text-left relative">
+                                            <button
+                                                class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
+                                                <i class="fa-solid fa-ellipsis-vertical"
+                                                    style="color: rgb(124, 124, 124);"></i>
+                                            </button>
+                                            <div
+                                                class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
+                                                <a href="customer-details.html"
+                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        viewBox="0 0 18 18" fill="none">
+                                                        <path
+                                                            d="M11.6849 8.99994C11.6849 10.4849 10.4849 11.6849 8.99994 11.6849C7.51494 11.6849 6.31494 10.4849 6.31494 8.99994C6.31494 7.51494 7.51494 6.31494 8.99994 6.31494C10.4849 6.31494 11.6849 7.51494 11.6849 8.99994Z"
+                                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M9 15.2025C11.6475 15.2025 14.115 13.6425 15.8325 10.9425C16.5075 9.88504 16.5075 8.10754 15.8325 7.05004C14.115 4.35004 11.6475 2.79004 9 2.79004C6.3525 2.79004 3.885 4.35004 2.1675 7.05004C1.4925 8.10754 1.4925 9.88504 2.1675 10.9425C3.885 13.6425 6.3525 15.2025 9 15.2025Z"
+                                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                                <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
+
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -834,20 +929,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">محمد خالد</span>
+                                                <span class="font-medium text-base">سلمى محمد</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">m.khaled@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">059 876 2145</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">مهندس برمجيات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">8 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">فلسطين</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">salma.m@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599456123</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أنثى</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">عزباء</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">2001-07-18</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -856,7 +951,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -873,7 +968,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -915,20 +1010,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">أحمد يوسف</span>
+                                                <span class="font-medium text-base">ريم العطار</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">ahmad.yousef@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">056 214 7854</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">صيدلي</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">10 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">الأردن</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">reem.attar@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599567890</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أنثى</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">عزباء</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">1999-09-24</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -937,7 +1032,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -954,7 +1049,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -996,20 +1091,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">سارة علي</span>
+                                                <span class="font-medium text-base">يوسف ناصر</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">sara.ali@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">059 123 4567</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">أخصائية تغذية</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">6 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">الإمارات</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">yousef.nasser@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599781234</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">ذكر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">متزوج</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">1995-03-12</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -1018,7 +1113,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1035,7 +1130,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1077,20 +1172,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">خالد عمر</span>
+                                                <span class="font-medium text-base">ليان يوسف</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">k.omar@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">056 998 7755</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">طبيب أسنان</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">12 سنة</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">قطر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">layan.yousef@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599876543</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أنثى</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">متزوجة</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">1997-12-08</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -1099,7 +1194,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1116,7 +1211,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1158,20 +1253,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">ريم حسن</span>
+                                                <span class="font-medium text-base">عمر سمير</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">reem.hassan@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">059 745 8899</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">ممرضة</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">9 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">مصر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">omar.sameer@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599654321</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">ذكر</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أعزب</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">2003-01-30</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -1180,7 +1275,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1197,7 +1292,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1239,20 +1334,20 @@
                                         </td>
                                     </tr>
                                     <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
+                                        <td class="py-4 ">
                                             <div class="flex items-center gap-3">
                                                 <div class="img shrink-0 flex items-center justify-center">
                                                     <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
                                                         src="../assets/images/dashpord/Frame 1300193088.png">
                                                 </div>
-                                                <span class="font-medium text-base">يوسف سمير</span>
+                                                <span class="font-medium text-base">نور علي</span>
                                             </div>
                                         </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">yousef.samir@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">059 661 2233</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">أخصائي علاج طبيعي</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">7 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">الكويت</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">nour.ali@example.com</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">0599234789</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">أنثى</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">عزباء</td>
+                                        <td class="py-4 text-sm text-[#4E5969] ">2000-06-21</td>
                                         <td class="py-4 text-left relative">
                                             <button
                                                 class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
@@ -1261,7 +1356,7 @@
                                             </button>
                                             <div
                                                 class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
+                                                <a href="customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1278,7 +1373,7 @@
                                                 </a>
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
+                                                <a href="edit-customer-details.html"
                                                     class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#86909C]">تعديل</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -1319,87 +1414,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr class="text-[#1D2129] hover:bg-[#FAFAFA] transition-colors relative">
-                                        <td class="py-4">
-                                            <div class="flex items-center gap-3">
-                                                <div class="img shrink-0 flex items-center justify-center">
-                                                    <img class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
-                                                        src="../assets/images/dashpord/Frame 1300193088.png">
-                                                </div>
-                                                <span class="font-medium text-base">نور إبراهيم</span>
-                                            </div>
-                                        </td>
-                                        <td class="py-4 text-sm text-[#4E5969] break-all">noor.ibrahim@gmail.com</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">056 334 1198</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">أخصائية مختبرات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">5 سنوات</td>
-                                        <td class="py-4 text-sm text-[#4E5969]">عُمان</td>
-                                        <td class="py-4 text-left relative">
-                                            <button
-                                                class="table-action-btn text-[#075E66] hover:underline text-sm cursor-pointer">
-                                                <i class="fa-solid fa-ellipsis-vertical"
-                                                    style="color: rgb(124, 124, 124);"></i>
-                                            </button>
-                                            <div
-                                                class="table-action-menu hidden absolute left-1.5 bg-white pt-4 pb-4 border border-2 border-[#E5E6EB] rounded-xl w-48 z-50">
-                                                <a href="specialist-details.html"
-                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
-                                                    <p class="font-medium text-base text-[#86909C]">مشاهدة التفاصيل</p>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                        viewBox="0 0 18 18" fill="none">
-                                                        <path
-                                                            d="M11.6849 8.99994C11.6849 10.4849 10.4849 11.6849 8.99994 11.6849C7.51494 11.6849 6.31494 10.4849 6.31494 8.99994C6.31494 7.51494 7.51494 6.31494 8.99994 6.31494C10.4849 6.31494 11.6849 7.51494 11.6849 8.99994Z"
-                                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                        <path
-                                                            d="M9 15.2025C11.6475 15.2025 14.115 13.6425 15.8325 10.9425C16.5075 9.88504 16.5075 8.10754 15.8325 7.05004C14.115 4.35004 11.6475 2.79004 9 2.79004C6.3525 2.79004 3.885 4.35004 2.1675 7.05004C1.4925 8.10754 1.4925 9.88504 2.1675 10.9425C3.885 13.6425 6.3525 15.2025 9 15.2025Z"
-                                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                                <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
-                                                <a href=""
-                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
-                                                    <p class="font-medium text-base text-[#86909C]">تعديل</p>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                        viewBox="0 0 18 18" fill="none">
-                                                        <path
-                                                            d="M9.94501 2.69992L3.78751 9.21742C3.55501 9.46492 3.33001 9.95242 3.28501 10.2899L3.00751 12.7199C2.91001 13.5974 3.54001 14.1974 4.41001 14.0474L6.82501 13.6349C7.16251 13.5749 7.63501 13.3274 7.86751 13.0724L14.025 6.55492C15.09 5.42992 15.57 4.14742 13.9125 2.57992C12.2625 1.02742 11.01 1.57492 9.94501 2.69992Z"
-                                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path
-                                                            d="M8.91748 3.7876C9.23998 5.8576 10.92 7.4401 13.005 7.6501"
-                                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M2.25 16.5H15.75" stroke="#86909C" stroke-width="1.5"
-                                                            stroke-miterlimit="10" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                                <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
-
-                                                <button class="delete-row-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
-                                                    <p class="font-medium text-base text-[#F76560]">حذف</p>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path
-                                                            d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511"
-                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path
-                                                            d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275"
-                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path
-                                                            d="M14.1375 6.85498L13.65 14.4075C13.5675 15.585 13.5 16.5 11.4075 16.5H6.59255C4.50005 16.5 4.43255 15.585 4.35005 14.4075L3.86255 6.85498"
-                                                            stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.74756 12.375H10.2451" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                        <path d="M7.125 9.375H10.875" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1427,11 +1442,13 @@
                 </div>
             </main>
         </div>
-        <div id="specialist-sorting-container"
-            class="hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center z-50">
-            <div id="specialist-sorting-wrapper"
-                class="bg-white shadow-lg rounded-xl max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
-                <div class="info sticky top-0 flex flex-row justify-between items-center pt-4 pb-4 z-50 bg-white">
+
+        <!-- Customer sorting -->
+        <div id="customer-sorting-container"
+            class="hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div id="customer-sorting-wrapper"
+                class="bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div class="info sticky top-0 bg-white z-50 flex flex-row justify-between items-center pt-4 pb-4">
                     <div class="flex flex-row items-center gap-2">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1441,9 +1458,9 @@
                             <path d="M10.93 2.1001L6 10.0001" stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <p class="text-[#075E66] font-medium text-xl">فرز الأخصائيين حسب</p>
+                        <p class="text-[#075E66] font-medium text-xl">فرز العملاء حسب</p>
                     </div>
-                    <svg id="close-specialist-sorting-btn" class="cursor-pointer" width="28" height="28"
+                    <svg id="close-customer-sorting-btn" class="cursor-pointer" width="28" height="28"
                         viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
@@ -1455,14 +1472,33 @@
                     </svg>
                 </div>
                 <form action="" method="" class="flex flex-col items-start gap-3">
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="" class="text-[#1D2129]">التخصص</label>
-                        <select name="" id="" class="select-field">
-                            <option value="">اختر التخصص</option>
-                            <option value="psychology">علم النفس</option>
-                            <option value="psychiatry">الطب النفسي</option>
-                            <option value="social-work">الخدمة الاجتماعية</option>
-                            <option value="behavioral-therapy">العلاج السلوكي</option>
+                    <div class="select-input flex flex-col items-start gap-3 w-full">
+                        <label for="" class="text-[#1D2129]">الجنس</label>
+                        <div class="relative w-full">
+                            <select class="select-field">
+                                <option value="">اختر الجنس</option>
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                            </select>
+                            <button class="select-btn absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer">
+                                <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
+                                        stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="material-status-input flex flex-col items-start gap-3 w-full relative">
+                        <label for="marital-status-select" class="text-[#1D2129]">الحالة الإجتماعية</label>
+                        <select name="" class="select-field">
+                            <option value="">اختر الحالة الإجتماعية</option>
+                            <option value="single">أعزب</option>
+                            <option value="married">متزوج</option>
+                            <option value="divorced">مطلقة</option>
+                            <option value="widowed">أرملة</option>
                         </select>
                         <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
                             <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
@@ -1474,32 +1510,39 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="experience-field flex flex-col items-start gap-3 w-full relative">
-                        <label for="" class="text-[#1D2129]">الخبرة</label>
-                        <input class=" text-[#86909C] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3
-                               focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text
-                               placeholder:text-[#86909C] placeholder:font-light" placeholder="حدد الخبرة">
+                    <div class="date-input flex flex-col items-start gap-3 w-full relative">
+                        <label for="sex" class="text-[#1D2129]">تاريخ الميلاد</label>
+                        <input
+                            class="date-picker text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 cursor-pointer placeholder:text-[#86909C] placeholder:font-light focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100"
+                            placeholder="حدد التاريخ">
+                        <button class="date-btn absolute left-2 top-12 cursor-pointer">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.3335 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.6665 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.2085 8.33252H18.7918" stroke="#86909C" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M19.25 7.79159V15.5833C19.25 18.3333 17.875 20.1666 14.6667 20.1666H7.33333C4.125 20.1666 2.75 18.3333 2.75 15.5833V7.79159C2.75 5.04159 4.125 3.20825 7.33333 3.20825H14.6667C17.875 3.20825 19.25 5.04159 19.25 7.79159Z"
+                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M14.3869 12.5584H14.3951" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.3869 15.3084H14.3951" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10.9958 12.5584H11.004" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10.9958 15.3084H11.004" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7.6032 12.5584H7.61143" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7.6032 15.3084H7.61143" stroke="#86909C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                         </input>
-                    </div>
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="" class="text-[#1D2129]">الدولة</label>
-                        <select name="" id="" class="select-field">
-                            <option value="">اختر الدولة</option>
-                            <option value="Palestine">فلسطين</option>
-                            <option value="Jordan">الأردن</option>
-                            <option value="Egypt">مصر</option>
-                            <option value="Saudi Arabia">المملكة العربية السعودية</option>
-                            <option value="United Arab Emirates">الإمارات العربية المتحدة</option>
-                        </select>
-                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
                     </div>
                     <div class="account-opening-date-field flex flex-col items-start gap-3 w-full relative">
                         <label for="sex" class="text-[#1D2129]">تاريخ فتح الحساب</label>
@@ -1582,61 +1625,41 @@
                 </form>
             </div>
         </div>
-        <div id="add-specialist-container"
-            class="hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-screen overflow-y-auto flex items-center justify-center z-50">
-            <div id="add-specialist-wrapper"
-                class="bg-white shadow-lg rounded-xl max-h-[85vh] w-full max-w-md mx-4 px-4 pb-4 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
 
-                <div class="sticky top-0 bg-white z-30">
-                    <div class="info  w-full shadow-b-lg flex flex-row justify-between items-center pt-8 pb-4 ">
-                        <div class="flex flex-row items-center gap-2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                    stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8 12H16" stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12 16V8" stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p class="text-[#075E66] font-medium text-xl">إضاقة أخصائي</p>
-                        </div>
-                        <svg id="close-add-specialist-btn" class="cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+        <!-- Add client -->
+        <div id="add-client-container"
+            class="hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div id="add-client-wrapper"
+                class="bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div class="info sticky top-0 bg-white z-50 flex flex-row justify-between items-center pt-4 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
-                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8 12H16" stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            <path d="M12 16V8" stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
+                        <p class="text-[#075E66] font-medium text-xl">إضافة عميل</p>
                     </div>
-                    <div
-                        class="header-specialist-sorting-container w-full border border-[#81C6C3] rounded-lg flex flex-row gap-1.5 justify-center items-center h-10 mb-4">
-                        <div id="icon-part">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                <path
-                                    d="M9.11992 8.1525C9.04492 8.145 8.95492 8.145 8.87242 8.1525C7.08742 8.0925 5.66992 6.63 5.66992 4.83C5.66992 2.9925 7.15492 1.5 8.99992 1.5C10.8374 1.5 12.3299 2.9925 12.3299 4.83C12.3224 6.63 10.9049 8.0925 9.11992 8.1525Z"
-                                    stroke="#4E5969" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M5.37004 10.92C3.55504 12.135 3.55504 14.115 5.37004 15.3225C7.43254 16.7025 10.815 16.7025 12.8775 15.3225C14.6925 14.1075 14.6925 12.1275 12.8775 10.92C10.8225 9.5475 7.44004 9.5475 5.37004 10.92Z"
-                                    stroke="#4E5969" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <span class="text-[#4E5969] font-medium text-base" id="title-part">البيانات الشخصية</span>
-                    </div>
-                    <div class="pb-2">
-                        <div class="progress-rate-wrapper w-full rounded-full bg-[#EAEAEA] h-2.5 mb-3">
-                            <div
-                                class="progress-rate transition-all duration-300 ease-in-out  rounded-full bg-[#075E66] h-2.5 flex justify-center">
-                                <div class="w-[85%] rounded-full bg-[#81C6C3] h-1.5 opacity-25"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <svg id="close-add-client-btn" class="cursor-pointer" width="28" height="28" viewBox="0 0 28 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
-                <form action="" method="" id="personal-data" class=" flex flex-col items-start gap-3">
+                <form action="" method="" class="flex flex-col items-start gap-3">
                     <div class="name-field flex flex-col items-start gap-3 w-full relative">
                         <label for="sex" class="text-[#1D2129]">الإسم</label>
                         <input type="text" placeholder="الإسم"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text cursor-text">
+                            class=" text-black font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
                         <svg class="absolute left-2 top-12" width="22" height="22" viewBox="0 0 22 22" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1659,13 +1682,11 @@
                             <path
                                 d="M15.5835 18.7916H6.41683C3.66683 18.7916 1.8335 17.4166 1.8335 14.2083V7.79159C1.8335 4.58325 3.66683 3.20825 6.41683 3.20825H15.5835C18.3335 3.20825 20.1668 4.58325 20.1668 7.79159V14.2083C20.1668 17.4166 18.3335 18.7916 15.5835 18.7916Z"
                                 stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round">
-                            </path>
+                                stroke-linejoin="round" />
                             <path
                                 d="M15.5832 8.25L12.714 10.5417C11.7698 11.2933 10.2207 11.2933 9.2765 10.5417L6.4165 8.25"
                                 stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round">
-                            </path>
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <div class="mail-field flex flex-col items-start gap-3 w-full relative">
@@ -1676,8 +1697,27 @@
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20.1393 16.8024C20.1393 17.1324 20.066 17.4716 19.9102 17.8016C19.7543 18.1316 19.5527 18.4433 19.2868 18.7366C18.8377 19.2316 18.3427 19.5891 17.7835 19.8183C17.2335 20.0474 16.6377 20.1666 15.996 20.1666C15.061 20.1666 14.0618 19.9466 13.0077 19.4974C11.9535 19.0483 10.8993 18.4433 9.85433 17.6824C8.80016 16.9124 7.801 16.0599 6.84766 15.1158C5.9035 14.1624 5.051 13.1633 4.29016 12.1183C3.5385 11.0733 2.9335 10.0283 2.4935 8.99242C2.0535 7.94742 1.8335 6.94825 1.8335 5.99492C1.8335 5.37159 1.9435 4.77575 2.1635 4.22575C2.3835 3.66659 2.73183 3.15325 3.21766 2.69492C3.80433 2.11742 4.446 1.83325 5.12433 1.83325C5.381 1.83325 5.63766 1.88825 5.86683 1.99825C6.10516 2.10825 6.316 2.27325 6.481 2.51159L8.60766 5.50909C8.77266 5.73825 8.89183 5.94909 8.97433 6.15075C9.05683 6.34325 9.10266 6.53575 9.10266 6.70992C9.10266 6.92992 9.0385 7.14992 8.91016 7.36075C8.791 7.57159 8.61683 7.79159 8.39683 8.01159L7.70016 8.73575C7.59933 8.83659 7.5535 8.95575 7.5535 9.10242C7.5535 9.17575 7.56266 9.23992 7.581 9.31325C7.6085 9.38659 7.636 9.44159 7.65433 9.49659C7.81933 9.79909 8.1035 10.1933 8.50683 10.6699C8.91933 11.1466 9.35933 11.6324 9.836 12.1183C10.331 12.6041 10.8077 13.0533 11.2935 13.4658C11.7702 13.8691 12.1643 14.1441 12.476 14.3091C12.5218 14.3274 12.5768 14.3549 12.641 14.3824C12.7143 14.4099 12.7877 14.4191 12.8702 14.4191C13.026 14.4191 13.1452 14.3641 13.246 14.2633L13.9427 13.5758C14.1718 13.3466 14.3918 13.1724 14.6027 13.0624C14.8135 12.9341 15.0243 12.8699 15.2535 12.8699C15.4277 12.8699 15.611 12.9066 15.8127 12.9891C16.0143 13.0716 16.2252 13.1908 16.4543 13.3466L19.4885 15.5008C19.7268 15.6658 19.8918 15.8583 19.9927 16.0874C20.0843 16.3166 20.1393 16.5458 20.1393 16.8024Z"
-                                stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"></path>
+                                stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" />
                         </svg>
+                    </div>
+                    <div class="material-status-input flex flex-col items-start gap-3 w-full relative">
+                        <label for="marital-status-select" class="text-[#1D2129]">الحالة الإجتماعية</label>
+                        <select name="" class="select-field">
+                            <option value="">اختر الحالة الإجتماعية</option>
+                            <option value="single">أعزب</option>
+                            <option value="married">متزوج</option>
+                            <option value="divorced">مطلقة</option>
+                            <option value="widowed">أرملة</option>
+                        </select>
+                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
+                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
+                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
                     <div class="date-input flex flex-col items-start gap-3 w-full relative">
                         <label for="sex" class="text-[#1D2129]">تاريخ الميلاد</label>
@@ -1713,193 +1753,19 @@
                         </button>
                         </input>
                     </div>
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="sex-select" class="text-[#1D2129]">اللغات التي يجيدها</label>
-                        <select class="select-field multiple-select-field" multiple>
-                            <option value="Arabic">العربية</option>
-                            <option value="English">الإنجليزية</option>
-                            <option value="French">الفرنسية</option>
-                            <option value="Turkish">التركية</option>
-                            <option value="German">الألمانية</option>
-                        </select>
-                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-col gap-2.5 w-full">
-                        <span class="text-[#1D2129]">صورة شخصية مهنية</span>
-                        <div
-                            class="border border-[#C9CDD4] border-dashed w-full flex flex-row items-center gap-2.5 rounded-md h-20 pr-2.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
-                                fill="none">
-                                <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3" />
-                                <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66" />
-                                <path
-                                    d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
-                                    fill="white" />
-                            </svg>
-                            <span class="text-[#4E5969] text-base w-72">اسحب الملف هنا أو قم باستعراض الملفات في
-                                جهازك</span>
-                        </div>
-                    </div>
-
-                    <div class="btns flex flex-row justify-between w-full">
-                        <button type="submit" id="next-personal-data-btn"
-                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">التالي</button>
-                        <button type="reset" id=""
-                            class="cancle-add-specialist-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
-                            إلغاء
-                        </button>
-                    </div>
-                </form>
-                <form action="" method="" id="address-information" class="hidden flex flex-col items-start gap-3">
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="" class="text-[#1D2129]">الدولة</label>
-                        <select name="" id="" class="select-field">
-                            <option value="">اختر الدولة</option>
-                            <option value="Palestine">فلسطين</option>
-                            <option value="Jordan">الأردن</option>
-                            <option value="Egypt">مصر</option>
-                            <option value="Saudi Arabia">المملكة العربية السعودية</option>
-                            <option value="United Arab Emirates">الإمارات العربية المتحدة</option>
-                        </select>
-                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="" class="text-[#1D2129]">المدينة</label>
-                        <select name="" id="" class="select-field">
-                            <option value="">اختر المدينة</option>
-                            <option value="Gaza">غزة</option>
-                            <option value="Jerusalem">القدس</option>
-                            <option value="Nablus">نابلس</option>
-                            <option value="Hebron">الخليل</option>
-                            <option value="Ramallah">رام الله</option>
-                        </select>
-                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="btns flex flex-row justify-between w-full">
-                        <button type="submit" id="next-address-information-btn"
-                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">التالي</button>
-                        <button type="reset"
-                            class="cancle-add-specialist-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
-                            إلغاء
-                        </button>
-                    </div>
-                </form>
-                <form action="" method="" id="educational-details" class="hidden flex flex-col items-start gap-3">
-                    <div class="select-input flex flex-col items-start gap-3 w-full relative">
-                        <label for="sex-select" class="text-[#1D2129]">الدرجة العلمية</label>
-                        <select class="select-field">
-                            <option value="">اختر الدرجة العلمية</option>
-                            <option value="High School">الثانوية العامة</option>
-                            <option value="Diploma">دبلوم</option>
-                            <option value="Bachelor">بكالوريوس</option>
-                            <option value="Master">ماجستير</option>
-                            <option value="Doctorate">دكتوراه</option>
-                        </select>
-                        <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="university-or-educational-institution-field flex flex-col items-start gap-3 w-full">
-                        <label for="sex" class="text-[#1D2129]">اسم الجامعة أو المؤسسة التعليمية</label>
-                        <input type="text" placeholder="حدد اسم الجامعة أو المؤسسة التعليمية"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
-
-                    </div>
-                    <div class="graduation-year-field flex flex-col items-start gap-3 w-full">
-                        <label for="sex" class="text-[#1D2129]">سنة التخرج</label>
-                        <input type="text" placeholder="حدد سنة التخرج"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
-
-                    </div>
-                    <div class="specialization-field flex flex-col items-start gap-3 w-full">
-                        <label for="sex" class="text-[#1D2129]">التخصص</label>
-                        <input type="text" placeholder="حدد التخصص"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
-
-                    </div>
-                    <div class="btns flex flex-row justify-between w-full">
-                        <button type="submit" id="next-educational-details-btn"
-                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">التالي</button>
-                        <button type="reset"
-                            class="cancle-add-specialist-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
-                            إلغاء
-                        </button>
-                    </div>
-                </form>
-                <form action="" method="" id="professional-details" class="hidden flex flex-col items-start gap-3">
-                    <div class="years-of-experience-field flex flex-col items-start gap-3 w-full">
-                        <label for="" class="text-[#1D2129]">سنوات الخبرة</label>
-                        <input type="text" placeholder="حدد سنوات الخبرة"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
-
-                    </div>
-                    <div class="classification-name-field flex flex-col items-start gap-3 w-full">
-                        <label for="" class="text-[#1D2129]">مسمى التصنيف</label>
-                        <input type="text" placeholder="اكتب مسمى التصنيف"
-                            class=" text-[#86909C] font-light placeholder:font-light placeholder:text-[#86909C] border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
-
-                    </div>
-                    <div class="select-input flex flex-col items-start gap-3 w-full ">
-                        <label for="sex-select" class="text-[#1D2129]">نوع الاستشارات التي يرغب يتقديمها على منصة
-                            تحرر</label>
-                        <div class="relative  w-full">
-                            <select class="select-field">
-                                <option value="">اختر نوع الاستشارة</option>
-
-                            </select>
-                            <button class="select-btn absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer">
-                                <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                        stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
                     <div class="btns flex flex-row justify-between w-full">
                         <button type="submit" id="save-btn"
-                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">حفظ
-                            و إضافة</button>
-                        <button type="reset"
-                            class="cancle-add-specialist-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">حفظ</button>
+                        <button type="reset" id="cancle-add-client-btn"
+                            class="bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
                             إلغاء
                         </button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <!-- delete row from table -->
         <div
             class="delete-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
             <div
@@ -1916,10 +1782,10 @@
                             <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <p class="text-[#075E66] font-medium text-xl">حذف أخصائي</p>
+                        <p class="text-[#075E66] font-medium text-xl">حذف عميل</p>
                     </div>
-                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
                             stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1950,13 +1816,13 @@
         </div>
         <!-- For mobile -->
         <div
-            class="search-specialist-with-mobile hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center ">
+            class="search-customer-with-mobile hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center ">
             <div class="bg-white shadow-lg rounded-xl  w-full max-w-md mx-4 ">
                 <div class="info flex flex-row justify-between items-center pt-4 pb-4 w-full p-4">
                     <div class="relative flex-1">
-                        <input type="text" name="search" id="search" placeholder="البحث عن أخصائي..."
+                        <input type="text" name="search" id="search" placeholder="البحث عن عميل..."
                             class="bg-white  w-full h-11 rounded-lg pr-10 pl-3 
-                                                                                                                                       placeholder:text-[#86909C] placeholder:font-medium placeholder:text-xs focus:outline-none focus:ring-0 ">
+                                                                                                                               placeholder:text-[#86909C] placeholder:font-medium placeholder:text-xs focus:outline-none focus:ring-0 ">
                         <svg class="absolute right-4 top-1/2 -translate-y-1/2 " xmlns="http://www.w3.org/2000/svg"
                             width="20" height="20" viewBox="0 0 24 24" fill="none">
                             <path
@@ -1966,7 +1832,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <svg class="close-specialist-search-with-mobile-btn cursor-pointer" width="28" height="28"
+                    <svg class="close-customer-search-with-mobile-btn cursor-pointer" width="28" height="28"
                         viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
@@ -1984,10 +1850,12 @@
         </div>
         <div class="background-with-sidbare hidden lg:hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full"></div>
     </div>
+
     <!-- tom-select -->
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <!-- Flatpickr Library -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script src="../assets/js/script.js"></script>
 </body>
 
