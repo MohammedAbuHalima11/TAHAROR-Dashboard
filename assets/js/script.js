@@ -718,13 +718,13 @@ if (customerManaementPage) {
                 document.body.style.overflow = '';
                 document.documentElement.style.overflow = '';
             }
-            
+
         }
     })
 
-    
 
-    
+
+
 
 
 
@@ -735,7 +735,6 @@ if (customerManaementPage) {
 
 //======================================================================================//
 // Customer-details page
-
 
 
 const customerDetailspage = document.getElementById('customer-details-page')
@@ -865,11 +864,13 @@ if (specialistManaementPage) {
     filteringBtn.addEventListener('click', function () {
         specialistSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeSpecialistSortingBtn.addEventListener('click', function () {
         specialistSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
 
@@ -883,6 +884,7 @@ if (specialistManaementPage) {
     addSpecialistBtn.addEventListener('click', function () {
         addSpecialistContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
         // progressRate.classList.add('w-1/4');
         progressRate.style.width = '25%';
     });
@@ -972,6 +974,9 @@ if (specialistManaementPage) {
 
 
             progressRate.style.width = '25%';
+
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
         }
     })
 
@@ -992,10 +997,42 @@ if (specialistManaementPage) {
                         </svg>`;
 
         progressRate.style.width = '25%';
+
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 
 
+
+    // واجهة حدف صف اخصائي من الجدول
+
+    const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    deleteRowBtns.forEach(btn => {
+
+        btn.onclick = () => {
+            deleteContainer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            closeBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+            cancelBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+        }
+    })
 
 
 
@@ -1564,7 +1601,10 @@ if (document.querySelector('.select-field')) {
         new TomSelect(select, {
             create: false,
             controlInput: null,
-            allowEmptyOption: true
+            allowEmptyOption: true,
+            ...(select.multiple && {
+                plugins: ['remove_button']
+            })
         });
     });
 
