@@ -421,8 +421,14 @@
   .max-h-\[95dvh\] {
     max-height: 95dvh;
   }
+  .max-h-\[95vdh\] {
+    max-height: 95vdh;
+  }
   .max-h-\[95vh\] {
     max-height: 95vh;
+  }
+  .max-h-\[95vيh\] {
+    max-height: 95vيh;
   }
   .max-h-\[99vh\] {
     max-height: 99vh;
