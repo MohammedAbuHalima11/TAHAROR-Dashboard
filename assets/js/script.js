@@ -471,16 +471,6 @@ if (document.querySelector("aside")) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
 //======================================================================================//
 //header
 
@@ -608,10 +598,6 @@ if (document.getElementById('home-page')) {
 
 }
 
-
-
-
-
 //======================================================================================//
 // Customer-management page
 
@@ -705,6 +691,40 @@ if (customerManaementPage) {
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
     }
+
+
+    // واجهة حدف صف عميل من الجدول
+
+    const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    deleteRowBtns.forEach(btn => {
+
+        btn.onclick = () => {
+            deleteContainer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            closeBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+            cancelBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+            
+        }
+    })
+
+    
+
+    
 
 
 
