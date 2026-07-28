@@ -400,23 +400,8 @@
   .h-screen {
     height: 100vh;
   }
-  .max-h-\[8dvh\] {
-    max-height: 8dvh;
-  }
-  .max-h-\[65dvh\] {
-    max-height: 65dvh;
-  }
-  .max-h-\[75dvh\] {
-    max-height: 75dvh;
-  }
-  .max-h-\[85dvh\] {
-    max-height: 85dvh;
-  }
-  .max-h-\[85vh\] {
-    max-height: 85vh;
-  }
-  .max-h-\[90dvh\] {
-    max-height: 90dvh;
+  .max-h-\[85vdh\] {
+    max-height: 85vdh;
   }
   .max-h-\[95dvh\] {
     max-height: 95dvh;
@@ -424,14 +409,11 @@
   .max-h-\[95vdh\] {
     max-height: 95vdh;
   }
-  .max-h-\[95vh\] {
-    max-height: 95vh;
-  }
-  .max-h-\[95vيh\] {
-    max-height: 95vيh;
-  }
   .max-h-\[99vh\] {
     max-height: 99vh;
+  }
+  .max-h-\[calc\(100dvh-2rem\)\] {
+    max-height: calc(100dvh - 2rem);
   }
   .min-h-16 {
     min-height: calc(var(--spacing) * 16);
@@ -577,9 +559,6 @@
   }
   .animate-pulse {
     animation: var(--animate-pulse);
-  }
-  .cursor-not-allowed {
-    cursor: not-allowed;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -860,6 +839,9 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .pt-0 {
     padding-top: 0;
   }
@@ -874,6 +856,9 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -1037,9 +1022,6 @@
   .opacity-50 {
     opacity: 50%;
   }
-  .opacity-60 {
-    opacity: 60%;
-  }
   .opacity-95 {
     opacity: 95%;
   }
@@ -1163,16 +1145,6 @@
         --tw-scale-x: 95%;
         --tw-scale-y: 95%;
         --tw-scale-z: 95%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-100 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 100%;
-        --tw-scale-y: 100%;
-        --tw-scale-z: 100%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
     }
