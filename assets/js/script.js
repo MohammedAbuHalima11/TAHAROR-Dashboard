@@ -733,6 +733,7 @@ if (customerManaementPage) {
 }
 
 
+
 //======================================================================================//
 // Customer-details page
 
@@ -782,10 +783,213 @@ if (customerDetailspage) {
 
 
 //======================================================================================//
+// Sessions details page
+
+if (document.getElementById('session-details-page')) {
+
+
+    //زر خيارات العميل
+
+    const customerOptionsBtn = document.getElementById('customer-options-btn');
+    const customerOptionsMenu = document.getElementById('customer-options-menu');
+    const closeCustomerBtn = document.querySelector('.close-btn');
+    const cancelCustomerBtn = document.querySelector('.cancel-btn');
+
+    customerOptionsMenu.onclick = (e) => e.stopPropagation();
+
+    customerOptionsBtn.onclick = (e) => {
+        e.stopPropagation();
+        customerOptionsMenu.classList.toggle('hidden');
+        specialistOptionsMenu.classList.add('hidden');
+    }
+    document.addEventListener('click', () => {
+        customerOptionsMenu.classList.add('hidden');
+    });
+
+    // واجهة حدف  عميل  
+
+    const deleteCustomerBtn = document.getElementById('customer-options-menu').querySelector('.delete-btn');
+    const deleteCustomerContainer = document.querySelector('.delete-container');
+
+    deleteCustomerBtn.onclick = () => {
+        deleteCustomerContainer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+        closeCustomerBtn.onclick = () => {
+            deleteCustomerContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+        cancelCustomerBtn.onclick = () => {
+            deleteCustomerContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+
+
+
+
+    //زر خيارات الأخصائي
+
+    const specialistOptionsBtn = document.getElementById('specialist-options-btn');
+    const specialistOptionsMenu = document.getElementById('specialist-options-menu');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    specialistOptionsMenu.onclick = (e) => e.stopPropagation();
+
+    specialistOptionsBtn.onclick = (e) => {
+        e.stopPropagation();
+        specialistOptionsMenu.classList.toggle('hidden');
+        customerOptionsMenu.classList.add('hidden');
+    }
+    document.addEventListener('click', () => {
+        specialistOptionsMenu.classList.add('hidden');
+    });
+
+    // واجهة حدف  اخصائي  
+
+    const deleteBtn = document.getElementById('specialist-options-menu').querySelector('.delete-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+
+    deleteBtn.onclick = () => {
+        deleteContainer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+        closeBtn.onclick = () => {
+            deleteContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+        cancelBtn.onclick = () => {
+            deleteContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    }
+
+
+    // الضغط على زر الاشعارات
+    document.querySelectorAll('.notifications-btn').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelector('.send-notifications-container').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+    })
+
+    document.querySelectorAll('.close-send-notifications-btn').forEach(btn => {
+        btn.onclick = (e) => {
+            document.querySelector('.send-notifications-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    })
+
+    document.querySelectorAll('.cancle-send-notifications-btn').forEach(btn => {
+        btn.onclick = (e) => {
+            document.querySelector('.send-notifications-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    })
+
+    //ازرار تعديل و حفظ و حدف الجلسة
+
+    document.querySelector('.edite-sesssion').onclick = () => {
+
+        document.querySelector('.edite-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+    document.querySelector('.save-sesssion').onclick = () => {
+
+        document.querySelector('.save-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+    document.querySelector('.delete-sesssion').onclick = () => {
+
+        document.querySelector('.delete-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+
+
+    document.querySelectorAll('.close-btn').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelector('.edite-container').classList.add('hidden');
+            document.querySelector('.save-container').classList.add('hidden');
+            document.querySelector('.delete-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    })
+
+}
+
+
+
+
+//======================================================================================//
 // edite customer details page
 
 
 if (document.getElementById('edite-customer-details-page')) {
+
+
+    //زر خيارات العميل
+
+    const customerOptionsBtn = document.getElementById('customer-options-btn');
+    const customerOptionsMenu = document.getElementById('customer-options-menu');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    customerOptionsMenu.onclick = (e) => e.stopPropagation();
+
+    customerOptionsBtn.onclick = (e) => {
+        e.stopPropagation();
+        customerOptionsMenu.classList.toggle('hidden');
+    }
+    document.addEventListener('click', () => {
+        customerOptionsMenu.classList.add('hidden');
+    });
+
+
+    // واجهة حدف  عميل  
+
+    const deleteBtn = document.getElementById('customer-options-menu').querySelector('.delete-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+
+    deleteBtn.onclick = () => {
+        deleteContainer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+        closeBtn.onclick = () => {
+            deleteContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+        cancelBtn.onclick = () => {
+            deleteContainer.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+
+
+
     // الضغط على زر الاشعارات
     document.querySelector('.notifications-btn').onclick = () => {
         document.querySelector('.send-notifications-container').classList.remove('hidden');
@@ -1039,7 +1243,7 @@ if (specialistManaementPage) {
     })
 
 
-   
+
 
 }
 

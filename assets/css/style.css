@@ -1149,6 +1149,16 @@
       }
     }
   }
+  .hover\:scale-99 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 99%;
+        --tw-scale-y: 99%;
+        --tw-scale-z: 99%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:scale-\[0\.99\] {
     &:hover {
       @media (hover: hover) {
@@ -1418,6 +1428,12 @@
     @media (width >= 40rem) {
       font-size: var(--text-xs);
       line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
+  .sm\:font-bold {
+    @media (width >= 40rem) {
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
     }
   }
   .placeholder\:sm\:text-base {

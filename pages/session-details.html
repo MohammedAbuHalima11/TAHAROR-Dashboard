@@ -600,7 +600,7 @@
                         </p>
                         <div class="flex flex-row justify-between items-end mt-8 sm:px-3 relative">
                             <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">معلومات الجلسة</h1>
-                            <button id="customer-options-btn"
+                            <button id=""
                                 class="bg-[#CAE5DE] w-28 h-10 sm:w-36 flex flex-row justify-center items-center gap-2  border border-[#81C6C3] rounded-lg cursor-pointer  transition-all duration-300 active:scale-95">
                                 <svg class="hidden sm:block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -906,40 +906,72 @@
                         <div class="customer-wrapper w-full pt-5 flex flex-col gap-4">
                             <div class="info-customer-wrapper flex flex-row justify-between items-end mt-8 px-3">
                                 <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">العميل</h1>
-                                <button id="customer-options-btn"
-                                    class="bg-[#CAE5DE] w-28 h-10 sm:w-36  flex flex-row justify-center items-center gap-2  border border-[#81C6C3] rounded-lg cursor-pointer  transition-all duration-300 active:scale-95">
-                                    <svg class="hidden sm:block" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                    <svg class="sm:hidden" width="16" height="16" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                    <span class="text-[#075E66] font-medium text-xs sm:text-sm">خيارات العميل</span>
-                                </button>
+                                <div class="relative">
+                                    <button type="button" id="customer-options-btn"
+                                        class="bg-[#CAE5DE] w-28 h-10 sm:w-36  flex flex-row justify-center items-center gap-2  border border-[#81C6C3] rounded-lg cursor-pointer  transition-all duration-300 active:scale-95">
+                                        <svg class="hidden sm:block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <svg class="sm:hidden" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span class="text-[#075E66] font-medium text-xs sm:text-sm">خيارات العميل</span>
+                                    </button>
+                                    <div id="customer-options-menu"
+                                        class="hidden absolute left-0 top-12 bg-white pt-4 pb-4 border border-[#E5E6EB] rounded-xl w-48 z-50">
+                                        <a href="edit-customer-details.html"
+                                            class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                            <p class="font-medium text-base text-[#86909C]">تعديل</p>
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.94501 2.69992L3.78751 9.21742C3.55501 9.46492 3.33001 9.95242 3.28501 10.2899L3.00751 12.7199C2.91001 13.5974 3.54001 14.1974 4.41001 14.0474L6.82501 13.6349C7.16251 13.5749 7.63501 13.3274 7.86751 13.0724L14.025 6.55492C15.09 5.42992 15.57 4.14742 13.9125 2.57992C12.2625 1.02742 11.01 1.57492 9.94501 2.69992Z"
+                                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.91748 3.7876C9.23998 5.8576 10.92 7.4401 13.005 7.6501" stroke="#86909C" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.25 16.5H15.75" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                    
+                                        </a>
+                                        <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
+                                        <button class="delete-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                            <p class="font-medium text-base text-[#F76560]">حذف</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M14.1373 6.85498L13.6498 14.4075C13.5673 15.585 13.4998 16.5 11.4073 16.5H6.5923C4.4998 16.5 4.4323 15.585 4.3498 14.4075L3.8623 6.85498"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7.74756 12.375H10.2451" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M7.125 9.375H10.875" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div
                                 class="w-full bg-white rounded-b-xl border border-[#E5E6EB] p-6 flex flex-row justify-between sm:flex-col gap-6 ">
@@ -993,7 +1025,7 @@
 
                                     </div>
                                 </div>
-                                <div class="flex flex-col sm:flex-row justify-start sm:items-center gap-5 ">
+                                <div class="flex flex-col sm:flex-row justify-start sm:items-center gap-5">
                                     <a href="" class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center gap-2.5
                                                                     border border-[#81C6C3] rounded-full
                                                                     transition-all duration-300
@@ -1067,8 +1099,8 @@
                                         </svg>
                                         <span class="font-medium text-sm sm:text-lg text-[#4E5969]">واتساب</span>
                                     </a>
-                                    <a href=""
-                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95">
+                                    <button 
+                                        class="notifications-btn group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                                         <svg class="hidden sm:block transition-transform duration-300 group-hover:translate-x-1"
                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1100,47 +1132,80 @@
                                                 stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10"></path>
                                         </svg>
                                         <span class="font-medium text-sm sm:text-lg text-[#4E5969]">إشعار</span>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div class="specialist-wrapper w-full pt-5 flex flex-col gap-4">
                             <div class="info-customer-wrapper flex flex-row justify-between items-end mt-8 px-3">
                                 <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">الأخصائي</h1>
-                                <button id="customer-options-btn"
-                                    class="bg-[#CAE5DE] w-28 h-10 sm:w-36  flex flex-row justify-center items-center gap-2  border border-[#81C6C3] rounded-lg cursor-pointer  transition-all duration-300 active:scale-95">
-                                    <svg class="hidden sm:block" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                    <svg class="sm:hidden" width="16" height="16" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
-                                            stroke="#075E66" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                    <span class="text-[#075E66] font-medium text-xs sm:text-sm">خيارات الأخصائي</span>
-                                </button>
+                                <div class="relative">
+                                    <button type="button" id="specialist-options-btn"
+                                        class="bg-[#CAE5DE] w-28 h-10 sm:w-36  flex flex-row justify-center items-center gap-2  border border-[#81C6C3] rounded-lg cursor-pointer  transition-all duration-300 active:scale-95">
+                                        <svg class="hidden sm:block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <svg class="sm:hidden" width="16" height="16" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0999 10.65C10.0416 10.6417 9.9666 10.6417 9.89993 10.65C8.43327 10.6 7.2666 9.39998 7.2666 7.92498C7.2666 6.41665 8.48327 5.19165 9.99993 5.19165C11.5083 5.19165 12.7333 6.41665 12.7333 7.92498C12.7249 9.39998 11.5666 10.6 10.0999 10.65Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M15.6166 16.15C14.1333 17.5084 12.1666 18.3334 9.99997 18.3334C7.8333 18.3334 5.86663 17.5084 4.3833 16.15C4.46663 15.3667 4.96663 14.6 5.8583 14C8.14163 12.4834 11.875 12.4834 14.1416 14C15.0333 14.6 15.5333 15.3667 15.6166 16.15Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99984 18.3334C14.6022 18.3334 18.3332 14.6025 18.3332 10.0001C18.3332 5.39771 14.6022 1.66675 9.99984 1.66675C5.39746 1.66675 1.6665 5.39771 1.6665 10.0001C1.6665 14.6025 5.39746 18.3334 9.99984 18.3334Z"
+                                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span class="text-[#075E66] font-medium text-xs sm:text-sm">خيارات الأخصائي</span>
+                                    </button>
+                                    <div id="specialist-options-menu"
+                                        class="hidden absolute left-0 top-12 bg-white pt-4 pb-4 border border-[#E5E6EB] rounded-xl w-48 z-50">
+                                        <a href=""
+                                            class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                            <p class="font-medium text-base text-[#86909C]">تعديل</p>
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.94501 2.69992L3.78751 9.21742C3.55501 9.46492 3.33001 9.95242 3.28501 10.2899L3.00751 12.7199C2.91001 13.5974 3.54001 14.1974 4.41001 14.0474L6.82501 13.6349C7.16251 13.5749 7.63501 13.3274 7.86751 13.0724L14.025 6.55492C15.09 5.42992 15.57 4.14742 13.9125 2.57992C12.2625 1.02742 11.01 1.57492 9.94501 2.69992Z"
+                                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.91748 3.7876C9.23998 5.8576 10.92 7.4401 13.005 7.6501" stroke="#86909C" stroke-width="1.5"
+                                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.25 16.5H15.75" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                
+                                        </a>
+                                        <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
+                                        <button class="delete-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                            <p class="font-medium text-base text-[#F76560]">حذف</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 4.48511C13.2525 4.23761 10.74 4.11011 8.235 4.11011C6.75 4.11011 5.265 4.18511 3.78 4.33511L2.25 4.48511"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6.375 3.7275L6.54 2.745C6.66 2.0325 6.75 1.5 8.0175 1.5H9.9825C11.25 1.5 11.3475 2.0625 11.46 2.7525L11.625 3.7275"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M14.1373 6.85498L13.6498 14.4075C13.5673 15.585 13.4998 16.5 11.4073 16.5H6.5923C4.4998 16.5 4.4323 15.585 4.3498 14.4075L3.8623 6.85498"
+                                                    stroke="#F76560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7.74756 12.375H10.2451" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M7.125 9.375H10.875" stroke="#F76560" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div
                                 class="w-full bg-white rounded-b-xl border border-[#E5E6EB] p-6 flex flex-row justify-between sm:flex-col gap-6 ">
@@ -1268,8 +1333,8 @@
                                         </svg>
                                         <span class="font-medium text-sm sm:text-lg text-[#4E5969]">واتساب</span>
                                     </a>
-                                    <a href=""
-                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95">
+                                    <button
+                                        class="notifications-btn group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                                         <svg class="hidden sm:block transition-transform duration-300 group-hover:translate-x-1"
                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1301,7 +1366,7 @@
                                                 stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10"></path>
                                         </svg>
                                         <span class="font-medium text-sm sm:text-lg text-[#4E5969]">إشعار</span>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1463,7 +1528,7 @@
                     <div class="btns flex flex-row justify-center items-center gap-5 mt-8">
 
                         <button
-                            class="group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center gap-2.5 bg-[#075E66]
+                            class="edite-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center gap-2.5 bg-[#075E66]
                                                                                         rounded-full
                                                                                         transition-all duration-300
                                                                                          active:scale-95 cursor-pointer">
@@ -1503,7 +1568,7 @@
                         </button>
 
                         <button
-                            class="group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
+                            class="save-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                             <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -1544,7 +1609,7 @@
                             </span>
                         </button>
                         <button
-                            class="group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
+                            class="delete-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                             <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -1577,37 +1642,177 @@
                             </span>
                         </button>
                     </div>
-                    <div id=""
-                        class="hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center">
-                        <div id=""
-                            class="bg-white shadow-lg rounded-xl flex flex-col justify-center items-center gap-2.5 w-1/3 p-4 z-40">
-                            <div class="info w-full flex flex-row justify-end items-center pt-4">
-                                <svg id="close-add-client-btn" class="cursor-pointer" width="28" height="28"
-                                    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
-                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"
-                                fill="none">
-                                <path
-                                    d="M40.0003 6.66675C21.6337 6.66675 6.66699 21.6334 6.66699 40.0001C6.66699 58.3667 21.6337 73.3334 40.0003 73.3334C58.367 73.3334 73.3337 58.3667 73.3337 40.0001C73.3337 21.6334 58.367 6.66675 40.0003 6.66675ZM55.9337 32.3334L37.0337 51.2334C36.567 51.7001 35.9337 51.9667 35.267 51.9667C34.6003 51.9667 33.967 51.7001 33.5003 51.2334L24.067 41.8001C23.1003 40.8334 23.1003 39.2334 24.067 38.2667C25.0337 37.3001 26.6337 37.3001 27.6003 38.2667L35.267 45.9334L52.4003 28.8001C53.367 27.8334 54.967 27.8334 55.9337 28.8001C56.9003 29.7667 56.9003 31.3334 55.9337 32.3334Z"
-                                    fill="#23C343" />
-                            </svg>
-                            <p class="text-[#000000] font-bold text-xl">تم التعديل بنجاح</p>
-                            <button type="submit"
-                                class="bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">المتابع</button>
-
-                        </div>
-                    </div>
+                    
                 </div>
             </main>
+        </div>
+        <div
+            class="send-notifications-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center z-50">
+            <div id="send-notifications-wrapper"
+                class="bg-white shadow-lg rounded-xl max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden relative">
+                <div class="info sticky top-0 flex flex-row justify-between items-center pt-4 pb-4 z-50 bg-white">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12.0196 2.91016C8.7096 2.91016 6.0196 5.60016 6.0196 8.91016V11.8002C6.0196 12.4102 5.7596 13.3402 5.4496 13.8602L4.2996 15.7702C3.5896 16.9502 4.0796 18.2602 5.3796 18.7002C9.6896 20.1402 14.3396 20.1402 18.6496 18.7002C19.8596 18.3002 20.3896 16.8702 19.7296 15.7702L18.5796 13.8602C18.2796 13.3402 18.0196 12.4102 18.0196 11.8002V8.91016C18.0196 5.61016 15.3196 2.91016 12.0196 2.91016Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+                            <path
+                                d="M13.8699 3.19994C13.5599 3.10994 13.2399 3.03994 12.9099 2.99994C11.9499 2.87994 11.0299 2.94994 10.1699 3.19994C10.4599 2.45994 11.1799 1.93994 12.0199 1.93994C12.8599 1.93994 13.5799 2.45994 13.8699 3.19994Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M15.0195 19.0601C15.0195 20.7101 13.6695 22.0601 12.0195 22.0601C11.1995 22.0601 10.4395 21.7201 9.89953 21.1801C9.35953 20.6401 9.01953 19.8801 9.01953 19.0601"
+                                stroke="#075E66" stroke-width="1.5" stroke-miterlimit="10" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">إرسال إشعار</p>
+                    </div>
+                    <svg class="close-send-notifications-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <form action="" method="" class="flex flex-col items-start gap-3">
+        
+                    <div class="flex flex-col gap-2.5 w-full">
+                        <span class="text-[#1D2129]">محتوى الإشعار</span>
+                        <textarea name="" id="" cols="30" rows="3"
+                            class="resize-none text-[#344054] border border-[#E5E6EB] rounded-md w-full py-2 px-3
+                                                                                                   focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100
+                                                                                                   placeholder:text-[#86909C] placeholder:font-light"
+                            placeholder="اكتب محتوى الإشعار هنا..."></textarea>
+                    </div>
+        
+        
+        
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button type="submit" id="save-btn"
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">حفظ</button>
+                        <button type="button"
+                            class="cancle-send-notifications-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer ">
+                            إلغاء
+                        </button>
+        
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div
+            class="edite-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-end items-center pt-5 pb-4">
+                    
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path
+                            d="M39.9998 6.66699C21.6332 6.66699 6.6665 21.6337 6.6665 40.0003C6.6665 58.367 21.6332 73.3337 39.9998 73.3337C58.3665 73.3337 73.3332 58.367 73.3332 40.0003C73.3332 21.6337 58.3665 6.66699 39.9998 6.66699ZM55.9332 32.3337L37.0332 51.2337C36.5665 51.7003 35.9332 51.967 35.2665 51.967C34.5998 51.967 33.9665 51.7003 33.4998 51.2337L24.0665 41.8003C23.0998 40.8337 23.0998 39.2337 24.0665 38.267C25.0332 37.3003 26.6332 37.3003 27.5998 38.267L35.2665 45.9337L52.3998 28.8003C53.3665 27.8337 54.9665 27.8337 55.9332 28.8003C56.8998 29.767 56.8998 31.3337 55.9332 32.3337Z"
+                            fill="#23C343" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-bold">تم التعديل بنجاح</span>
+                    <button
+                        class="close-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                        المتابعة</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="save-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-end items-center pt-5 pb-4">
+                    
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path
+                            d="M39.9998 6.66699C21.6332 6.66699 6.6665 21.6337 6.6665 40.0003C6.6665 58.367 21.6332 73.3337 39.9998 73.3337C58.3665 73.3337 73.3332 58.367 73.3332 40.0003C73.3332 21.6337 58.3665 6.66699 39.9998 6.66699ZM55.9332 32.3337L37.0332 51.2337C36.5665 51.7003 35.9332 51.967 35.2665 51.967C34.5998 51.967 33.9665 51.7003 33.4998 51.2337L24.0665 41.8003C23.0998 40.8337 23.0998 39.2337 24.0665 38.267C25.0332 37.3003 26.6332 37.3003 27.5998 38.267L35.2665 45.9337L52.3998 28.8003C53.3665 27.8337 54.9665 27.8337 55.9332 28.8003C56.8998 29.767 56.8998 31.3337 55.9332 32.3337Z"
+                            fill="#23C343" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-bold">تم حفظ البرنامج بنجاح</span>
+                    <button
+                        class="close-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                        المتابعة</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="delete-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-between items-center pt-5 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path
+                                d="M14.0002 25.6673C20.4168 25.6673 25.6668 20.4173 25.6668 14.0007C25.6668 7.58398 20.4168 2.33398 14.0002 2.33398C7.5835 2.33398 2.3335 7.58398 2.3335 14.0007C2.3335 20.4173 7.5835 25.6673 14.0002 25.6673Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.6982 17.3026L17.3016 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">حذف عميل</p>
+                    </div>
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                        <path
+                            d="M54 9.5C78.5189 9.5 98.5 29.4811 98.5 54C98.5 78.5189 78.5189 98.5 54 98.5C29.4811 98.5 9.5 78.5189 9.5 54C9.5 29.4811 29.4811 9.5 54 9.5ZM69.4736 38.5264C67.9734 37.0261 65.4964 37.0261 63.9961 38.5264L54 48.5225L44.0039 38.5264C42.5036 37.0261 40.0266 37.0261 38.5264 38.5264C37.0261 40.0266 37.0261 42.5036 38.5264 44.0039L48.5225 54L38.5264 63.9961C37.0261 65.4964 37.0261 67.9734 38.5264 69.4736C39.3 70.2472 40.2843 70.6103 41.2646 70.6104C42.2451 70.6104 43.2302 70.2473 44.0039 69.4736L54 59.4775L63.9961 69.4736C64.7698 70.2473 65.7549 70.6104 66.7354 70.6104C67.7157 70.6103 68.7 70.2472 69.4736 69.4736C70.9739 67.9734 70.9739 65.4964 69.4736 63.9961L59.4775 54L69.4736 44.0039C70.9739 42.5036 70.9739 40.0266 69.4736 38.5264Z"
+                            fill="#F53F3F" stroke="#F53F3F" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-medium">هل أنت متأكد أنك تريد حذف هذا العميل</span>
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                            حذف</button>
+                        <button class="cancel-btn close-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="background-with-sidbare hidden lg:hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full"></div>
     </div>
