@@ -792,8 +792,7 @@ if (document.getElementById('session-details-page')) {
 
     const customerOptionsBtn = document.getElementById('customer-options-btn');
     const customerOptionsMenu = document.getElementById('customer-options-menu');
-    const closeCustomerBtn = document.querySelector('.close-btn');
-    const cancelCustomerBtn = document.querySelector('.cancel-btn');
+
 
     customerOptionsMenu.onclick = (e) => e.stopPropagation();
 
@@ -809,20 +808,22 @@ if (document.getElementById('session-details-page')) {
     // واجهة حدف  عميل  
 
     const deleteCustomerBtn = document.getElementById('customer-options-menu').querySelector('.delete-btn');
-    const deleteCustomerContainer = document.querySelector('.delete-container');
+    const deleteCustomerContainer = document.querySelector('.delete-customer-container');
+
 
     deleteCustomerBtn.onclick = () => {
+        customerOptionsMenu.classList.add('hidden');
         deleteCustomerContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
 
-        closeCustomerBtn.onclick = () => {
+        deleteCustomerContainer.querySelector('.close-btn').onclick = () => {
             deleteCustomerContainer.classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
         }
 
-        cancelCustomerBtn.onclick = () => {
+        deleteCustomerContainer.querySelector('.cancel-btn').onclick = () => {
             deleteCustomerContainer.classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
@@ -832,13 +833,11 @@ if (document.getElementById('session-details-page')) {
 
 
 
-
     //زر خيارات الأخصائي
 
     const specialistOptionsBtn = document.getElementById('specialist-options-btn');
     const specialistOptionsMenu = document.getElementById('specialist-options-menu');
-    const closeBtn = document.querySelector('.close-btn');
-    const cancelBtn = document.querySelector('.cancel-btn');
+
 
     specialistOptionsMenu.onclick = (e) => e.stopPropagation();
 
@@ -851,28 +850,32 @@ if (document.getElementById('session-details-page')) {
         specialistOptionsMenu.classList.add('hidden');
     });
 
-    // واجهة حدف  اخصائي  
+    // واجهة حدف  أخصائي  
 
-    const deleteBtn = document.getElementById('specialist-options-menu').querySelector('.delete-btn');
-    const deleteContainer = document.querySelector('.delete-container');
+    const deleteSpecialistBtn = document.getElementById('specialist-options-menu').querySelector('.delete-btn');
+    const deleteSpecialistContainer = document.querySelector('.delete-specialist-container');
 
-    deleteBtn.onclick = () => {
-        deleteContainer.classList.remove('hidden');
+
+    deleteSpecialistBtn.onclick = () => {
+        specialistOptionsMenu.classList.add('hidden');
+        deleteSpecialistContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
 
-        closeBtn.onclick = () => {
-            deleteContainer.classList.add('hidden');
+        deleteSpecialistContainer.querySelector('.close-btn').onclick = () => {
+            deleteSpecialistContainer.classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
         }
 
-        cancelBtn.onclick = () => {
-            deleteContainer.classList.add('hidden');
+        deleteSpecialistContainer.querySelector('.cancel-btn').onclick = () => {
+            deleteSpecialistContainer.classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
         }
+
     }
+
 
 
     // الضغط على زر الاشعارات
@@ -902,39 +905,71 @@ if (document.getElementById('session-details-page')) {
 
     //ازرار تعديل و حفظ و حدف الجلسة
 
-    document.querySelector('.edite-sesssion').onclick = () => {
+    document.querySelector('.edite-session-btn').onclick = () => {
 
-        document.querySelector('.edite-container').classList.remove('hidden');
+        document.querySelector('.edite-session-container').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
-    }
-
-    document.querySelector('.save-sesssion').onclick = () => {
-
-        document.querySelector('.save-container').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        document.documentElement.style.overflow = 'hidden';
-    }
-
-    document.querySelector('.delete-sesssion').onclick = () => {
-
-        document.querySelector('.delete-container').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        document.documentElement.style.overflow = 'hidden';
-    }
 
 
-    document.querySelectorAll('.close-btn').forEach(btn => {
-        btn.onclick = () => {
-            document.querySelector('.edite-container').classList.add('hidden');
-            document.querySelector('.save-container').classList.add('hidden');
-            document.querySelector('.delete-container').classList.add('hidden');
+        document.querySelector('.edite-session-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.edite-session-container').classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
         }
-    })
+        document.querySelector('.edite-session-container').querySelector('.follow-up-btn').onclick = () => {
+            document.querySelector('.edite-session-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+
+    document.querySelector('.repeat-sesssion').onclick = () => {
+
+        document.querySelector('.repeat-session-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+
+        document.querySelector('.repeat-session-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.repeat-session-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        document.querySelector('.repeat-session-container').querySelector('.follow-up-btn').onclick = () => {
+            document.querySelector('.repeat-session-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+    }
+
+
+
+
+    document.querySelector('.delete-sesssion-btn').onclick = () => {
+        document.querySelector('.delete-session-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+        document.querySelector('.delete-session-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.delete-session-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+        document.querySelector('.delete-session-container').querySelector('.cancel-btn').onclick = () => {
+            document.querySelector('.delete-session-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
 
 }
+
+
+
 
 
 
@@ -1009,6 +1044,8 @@ if (document.getElementById('edite-customer-details-page')) {
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
     }
+
+
 }
 
 
@@ -1462,6 +1499,78 @@ if (treatmentProgramsPage) {
     }
 
 }
+
+//======================================================================================//
+// add programs page
+ 
+
+if (document.querySelector('#add-programs-page')) {
+
+    //ازرار تعديل و حفظ و حدف الجلسة
+    document.querySelector('.save-program-btn').onclick = () => {
+
+        document.querySelector('.save-program-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+
+        document.querySelector('.save-program-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.save-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        document.querySelector('.save-program-container').querySelector('.follow-up-btn').onclick = () => {
+            document.querySelector('.save-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+
+    document.querySelector('.Save-draft-btn').onclick = () => {
+
+        document.querySelector('.Save-draft-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+
+        document.querySelector('.Save-draft-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.Save-draft-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        document.querySelector('.Save-draft-container').querySelector('.follow-up-btn').onclick = () => {
+            document.querySelector('.Save-draft-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+
+    document.querySelector('.delete-program-btn').onclick = () => {
+
+        document.querySelector('.delete-program-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+
+        document.querySelector('.delete-program-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.delete-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        document.querySelector('.delete-program-container').querySelector('.cancel-btn').onclick = () => {
+            document.querySelector('.delete-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+}
+
+
+
+
 
 
 

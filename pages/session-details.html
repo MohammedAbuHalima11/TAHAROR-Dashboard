@@ -596,7 +596,7 @@
                 <div class="main-wrraper flex flex-col gap-4 p-6 min-w-0">
                     <section class="info-page">
                         <p class="text-[#4E5969] font-medium text-base">
-                            تفاصيل الجلسة
+                            الجلسات / تفاصيل الجلسة
                         </p>
                         <div class="flex flex-row justify-between items-end mt-8 sm:px-3 relative">
                             <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">معلومات الجلسة</h1>
@@ -1062,7 +1062,7 @@
                                         </span>
                                     </a>
                                     <a href=""
-                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95">
+                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-1 transition-all duration-300 active:scale-95">
                                         <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1296,7 +1296,7 @@
                                         </span>
                                     </a>
                                     <a href=""
-                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95">
+                                        class="group h-9 w-21 sm:h-10 sm:w-28 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-1 transition-all duration-300 active:scale-95">
                                         <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -1528,7 +1528,7 @@
                     <div class="btns flex flex-row justify-center items-center gap-5 mt-8">
 
                         <button
-                            class="edite-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center gap-2.5 bg-[#075E66]
+                            class="edite-session-btn group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center gap-2.5 bg-[#075E66]
                                                                                         rounded-full
                                                                                         transition-all duration-300
                                                                                          active:scale-95 cursor-pointer">
@@ -1568,7 +1568,7 @@
                         </button>
 
                         <button
-                            class="save-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
+                            class="repeat-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#81C6C3] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                             <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -1609,7 +1609,7 @@
                             </span>
                         </button>
                         <button
-                            class="delete-sesssion group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
+                            class="delete-sesssion-btn group h-8 w-24 sm:h-10 sm:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
                             <svg class="hidden sm:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
@@ -1703,7 +1703,7 @@
             </div>
         </div>
         <div
-            class="edite-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            class="edite-session-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
             <div
                 class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
                 <div
@@ -1729,13 +1729,13 @@
                     </svg>
                     <span class="text-[#1D2129] text-lg font-bold">تم التعديل بنجاح</span>
                     <button
-                        class="close-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                        class="follow-up-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
                         المتابعة</button>
                 </div>
             </div>
         </div>
         <div
-            class="save-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            class="repeat-session-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
             <div
                 class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
                 <div
@@ -1759,15 +1759,63 @@
                             d="M39.9998 6.66699C21.6332 6.66699 6.6665 21.6337 6.6665 40.0003C6.6665 58.367 21.6332 73.3337 39.9998 73.3337C58.3665 73.3337 73.3332 58.367 73.3332 40.0003C73.3332 21.6337 58.3665 6.66699 39.9998 6.66699ZM55.9332 32.3337L37.0332 51.2337C36.5665 51.7003 35.9332 51.967 35.2665 51.967C34.5998 51.967 33.9665 51.7003 33.4998 51.2337L24.0665 41.8003C23.0998 40.8337 23.0998 39.2337 24.0665 38.267C25.0332 37.3003 26.6332 37.3003 27.5998 38.267L35.2665 45.9337L52.3998 28.8003C53.3665 27.8337 54.9665 27.8337 55.9332 28.8003C56.8998 29.767 56.8998 31.3337 55.9332 32.3337Z"
                             fill="#23C343" />
                     </svg>
-                    <span class="text-[#1D2129] text-lg font-bold">تم حفظ البرنامج بنجاح</span>
+                    <span class="text-[#1D2129] text-lg font-bold">تم تكرار الجلسة بنجاح</span>
                     <button
-                        class="close-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                        class="follow-up-btn bg-[#075E66] rounded-md w-full text-[#FFFFFF] h-10 mt-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
                         المتابعة</button>
+                </div>
+            </div>
+        </div> 
+        <div
+            class="delete-session-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-between items-center pt-5 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path
+                                d="M14.0002 25.6673C20.4168 25.6673 25.6668 20.4173 25.6668 14.0007C25.6668 7.58398 20.4168 2.33398 14.0002 2.33398C7.5835 2.33398 2.3335 7.58398 2.3335 14.0007C2.3335 20.4173 7.5835 25.6673 14.0002 25.6673Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.6982 17.3026L17.3016 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">حذف جلسة</p>
+                    </div>
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                        <path
+                            d="M54 9.5C78.5189 9.5 98.5 29.4811 98.5 54C98.5 78.5189 78.5189 98.5 54 98.5C29.4811 98.5 9.5 78.5189 9.5 54C9.5 29.4811 29.4811 9.5 54 9.5ZM69.4736 38.5264C67.9734 37.0261 65.4964 37.0261 63.9961 38.5264L54 48.5225L44.0039 38.5264C42.5036 37.0261 40.0266 37.0261 38.5264 38.5264C37.0261 40.0266 37.0261 42.5036 38.5264 44.0039L48.5225 54L38.5264 63.9961C37.0261 65.4964 37.0261 67.9734 38.5264 69.4736C39.3 70.2472 40.2843 70.6103 41.2646 70.6104C42.2451 70.6104 43.2302 70.2473 44.0039 69.4736L54 59.4775L63.9961 69.4736C64.7698 70.2473 65.7549 70.6104 66.7354 70.6104C67.7157 70.6103 68.7 70.2472 69.4736 69.4736C70.9739 67.9734 70.9739 65.4964 69.4736 63.9961L59.4775 54L69.4736 44.0039C70.9739 42.5036 70.9739 40.0266 69.4736 38.5264Z"
+                            fill="#F53F3F" stroke="#F53F3F" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-medium">هل أنت متأكد أنك تريد حذف هذه الجلسة</span>
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                            حذف</button>
+                        <button class="cancel-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                            إلغاء
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <div
-            class="delete-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            class="delete-customer-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
             <div
                 class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
                 <div
@@ -1807,7 +1855,103 @@
                         <button
                             class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
                             حذف</button>
-                        <button class="cancel-btn close-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                        <button class="cancel-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="delete-customer-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-between items-center pt-5 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path
+                                d="M14.0002 25.6673C20.4168 25.6673 25.6668 20.4173 25.6668 14.0007C25.6668 7.58398 20.4168 2.33398 14.0002 2.33398C7.5835 2.33398 2.3335 7.58398 2.3335 14.0007C2.3335 20.4173 7.5835 25.6673 14.0002 25.6673Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.6982 17.3026L17.3016 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">حذف عميل</p>
+                    </div>
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                        <path
+                            d="M54 9.5C78.5189 9.5 98.5 29.4811 98.5 54C98.5 78.5189 78.5189 98.5 54 98.5C29.4811 98.5 9.5 78.5189 9.5 54C9.5 29.4811 29.4811 9.5 54 9.5ZM69.4736 38.5264C67.9734 37.0261 65.4964 37.0261 63.9961 38.5264L54 48.5225L44.0039 38.5264C42.5036 37.0261 40.0266 37.0261 38.5264 38.5264C37.0261 40.0266 37.0261 42.5036 38.5264 44.0039L48.5225 54L38.5264 63.9961C37.0261 65.4964 37.0261 67.9734 38.5264 69.4736C39.3 70.2472 40.2843 70.6103 41.2646 70.6104C42.2451 70.6104 43.2302 70.2473 44.0039 69.4736L54 59.4775L63.9961 69.4736C64.7698 70.2473 65.7549 70.6104 66.7354 70.6104C67.7157 70.6103 68.7 70.2472 69.4736 69.4736C70.9739 67.9734 70.9739 65.4964 69.4736 63.9961L59.4775 54L69.4736 44.0039C70.9739 42.5036 70.9739 40.0266 69.4736 38.5264Z"
+                            fill="#F53F3F" stroke="#F53F3F" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-medium">هل أنت متأكد أنك تريد حذف هذا العميل</span>
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-99">
+                            حذف</button>
+                        <button class="cancel-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="delete-specialist-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-between items-center pt-5 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path
+                                d="M14.0002 25.6673C20.4168 25.6673 25.6668 20.4173 25.6668 14.0007C25.6668 7.58398 20.4168 2.33398 14.0002 2.33398C7.5835 2.33398 2.3335 7.58398 2.3335 14.0007C2.3335 20.4173 7.5835 25.6673 14.0002 25.6673Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.6982 17.3026L17.3016 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">حذف أخصائي</p>
+                    </div>
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                        <path
+                            d="M54 9.5C78.5189 9.5 98.5 29.4811 98.5 54C98.5 78.5189 78.5189 98.5 54 98.5C29.4811 98.5 9.5 78.5189 9.5 54C9.5 29.4811 29.4811 9.5 54 9.5ZM69.4736 38.5264C67.9734 37.0261 65.4964 37.0261 63.9961 38.5264L54 48.5225L44.0039 38.5264C42.5036 37.0261 40.0266 37.0261 38.5264 38.5264C37.0261 40.0266 37.0261 42.5036 38.5264 44.0039L48.5225 54L38.5264 63.9961C37.0261 65.4964 37.0261 67.9734 38.5264 69.4736C39.3 70.2472 40.2843 70.6103 41.2646 70.6104C42.2451 70.6104 43.2302 70.2473 44.0039 69.4736L54 59.4775L63.9961 69.4736C64.7698 70.2473 65.7549 70.6104 66.7354 70.6104C67.7157 70.6103 68.7 70.2472 69.4736 69.4736C70.9739 67.9734 70.9739 65.4964 69.4736 63.9961L59.4775 54L69.4736 44.0039C70.9739 42.5036 70.9739 40.0266 69.4736 38.5264Z"
+                            fill="#F53F3F" stroke="#F53F3F" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-medium">هل أنت متأكد أنك تريد حذف هذا الأخصائي</span>
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">
+                            حذف</button>
+                        <button class="cancel-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
                             إلغاء
                         </button>
                     </div>
