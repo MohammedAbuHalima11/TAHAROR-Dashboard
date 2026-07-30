@@ -1504,6 +1504,39 @@ if (treatmentProgramsPage) {
         document.documentElement.style.overflow = '';
     }
 
+
+
+
+    // واجهة حدف صف برنامج من الجدول
+
+    const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+    const deleteContainer = document.querySelector('.delete-program-container');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    deleteRowBtns.forEach(btn => {
+
+        btn.onclick = () => {
+            deleteContainer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            closeBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+            cancelBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+        }
+    })
+
+
 }
 
 //======================================================================================//
@@ -1574,6 +1607,33 @@ if (document.querySelector('#add-programs-page')) {
     }
 }
 
+
+
+//======================================================================================//
+// program details page
+
+if (document.querySelector('#program-details-page')) {
+
+    document.querySelector('.delete-program-btn').onclick = () => {
+
+        document.querySelector('.delete-program-container').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
+
+        document.querySelector('.delete-program-container').querySelector('.close-btn').onclick = () => {
+            document.querySelector('.delete-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+        document.querySelector('.delete-program-container').querySelector('.cancel-btn').onclick = () => {
+            document.querySelector('.delete-program-container').classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+        }
+
+    }
+}
 
 
 
