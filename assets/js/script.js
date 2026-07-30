@@ -1768,11 +1768,13 @@ if (conversationManagementPage) {
     filteringBtn.addEventListener('click', function () {
         conversationManagementSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeConversationManagementSortingBtn.addEventListener('click', function () {
         conversationManagementSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
 
@@ -1801,6 +1803,54 @@ if (conversationManagementPage) {
         });
     });
 
+
+    //اظهار واجهة البحث عن محادثة للموبايل
+
+    const searchSessionWithMobileBtn = document.querySelector('.search-specialist-with-mobile-btn');
+    const searchSessionWithMobile = document.querySelector('.search-specialist-with-mobile');
+    const closeSessionSearchWithMobileBtn = document.querySelector('.close-specialist-search-with-mobile-btn');
+
+
+    searchSessionWithMobileBtn.onclick = () => {
+        searchSessionWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    }
+    closeSessionSearchWithMobileBtn.onclick = () => {
+        searchSessionWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+
+    // واجهة حدف صف محادثة من الجدول
+
+    const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+    const deleteContainer = document.querySelector('.delete-container');
+    const closeBtn = document.querySelector('.close-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+
+    deleteRowBtns.forEach(btn => {
+
+        btn.onclick = () => {
+            deleteContainer.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            closeBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+            cancelBtn.onclick = () => {
+                deleteContainer.classList.add('hidden');
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }
+
+        }
+    })
 
 }
 

@@ -4,6 +4,10 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- tom-select -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -632,499 +636,381 @@
                     </div>
                     <section class="bg-white w-full p-6 border border-[#E5E6EB] rounded-b-xl overflow-x-auto">
                         <div class="flex flex-col gap-5">
-
                             <div class="flex flex-col items-start gap-3 w-full relative">
                                 <label for="" class="text-[#1D2129]">عنوان البرامج</label>
                                 <input value="التخلص من الإكتئاب"
-                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:ring-0"
-                                    readonly>
+                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
 
                             </div>
-                            <div class="flex flex-col items-start gap-3 w-full relative">
-                                <label for="sex" class="text-[#1D2129]">المدرب</label>
-                                <select name="" id="" disabled
-                                    class=" text-[#1D2129] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none ">
-
-                                    <option value="" selected>محمد أبو القمبز</option>
+                            <div class="material-status-input flex flex-col items-start gap-3 w-full relative">
+                                <label for="marital-status-select" class="text-[#1D2129]">المدرب</label>
+                                <select name="" class="select-field">
+                                    <option value="single">محمد ابو القمبز</option>
+                                    <option value="married">محمد ابو حليمة</option>
                                 </select>
-                                <span class="absolute left-2 top-12">
-                                    <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                <button class="select-btn absolute left-2 top-12 z-10 cursor-pointer">
+                                    <svg width="19" height="19" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
+                                            stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </svg>
-                                </span>
+                                </button>
                             </div>
                             <button id=""
                                 class="bg-[#81C6C3] w-36 flex flex-row justify-center items-center gap-2 h-10 border border-[#81C6C3] rounded-lg text-white font-medium text-sm cursor-pointer  transition-all duration-300 active:scale-95">
                                 حفظ
                             </button>
                         </div>
-                        <section>
+                    </section>
 
-                            <div class="mt-4 pr-6 pl-6 relative">
-                                <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">تفاصيل البرامج</h1>
+                    <div class="mt-4 pr-6 pl-6 relative">
+                        <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">تفاصيل البرامج</h1>
+                    </div>
+
+                    <section
+                        class="bg-white w-full p-6 border border-[#E5E6EB] rounded-b-xl overflow-x-auto flex flex-col gap-4">
+                        <div
+                            class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
+                            <div class="flex flex-row gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect width="48" height="48" rx="6" fill="#F2F3F5" />
+                                    <path
+                                        d="M20.5002 35.6663H27.5002C33.3335 35.6663 35.6668 33.333 35.6668 27.4997V20.4997C35.6668 14.6663 33.3335 12.333 27.5002 12.333H20.5002C14.6668 12.333 12.3335 14.6663 12.3335 20.4997V27.4997C12.3335 33.333 14.6668 35.6663 20.5002 35.6663Z"
+                                        stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M20.4998 21.6667C21.7885 21.6667 22.8332 20.622 22.8332 19.3333C22.8332 18.0447 21.7885 17 20.4998 17C19.2112 17 18.1665 18.0447 18.1665 19.3333C18.1665 20.622 19.2112 21.6667 20.4998 21.6667Z"
+                                        stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.1152 32.1083L18.8669 28.2467C19.7886 27.6283 21.1186 27.6983 21.9469 28.41L22.3319 28.7483C23.2419 29.53 24.7119 29.53 25.6219 28.7483L30.4752 24.5833C31.3852 23.8017 32.8552 23.8017 33.7652 24.5833L35.6669 26.2167"
+                                        stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <div class="img-ingo">
+                                    <span class="text-[#075E66] font-medium">image 12</span>
+                                    <hr class="text-[#075E66]">
+                                    <span class="text-[#86909C] font-medium">MP 1.5</span>
+                                </div>
                             </div>
-                            <section
-                                class="bg-white w-full p-6 border border-[#E5E6EB] rounded-b-xl overflow-x-auto flex flex-col gap-4">
-                                <div
-                                    class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
-                                    <div class="flex flex-row gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            viewBox="0 0 48 48" fill="none">
-                                            <rect width="48" height="48" rx="6" fill="#F2F3F5" />
-                                            <path
-                                                d="M20.5002 35.6663H27.5002C33.3335 35.6663 35.6668 33.333 35.6668 27.4997V20.4997C35.6668 14.6663 33.3335 12.333 27.5002 12.333H20.5002C14.6668 12.333 12.3335 14.6663 12.3335 20.4997V27.4997C12.3335 33.333 14.6668 35.6663 20.5002 35.6663Z"
-                                                stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M20.4998 21.6667C21.7885 21.6667 22.8332 20.622 22.8332 19.3333C22.8332 18.0447 21.7885 17 20.4998 17C19.2112 17 18.1665 18.0447 18.1665 19.3333C18.1665 20.622 19.2112 21.6667 20.4998 21.6667Z"
-                                                stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M13.1152 32.1083L18.8669 28.2467C19.7886 27.6283 21.1186 27.6983 21.9469 28.41L22.3319 28.7483C23.2419 29.53 24.7119 29.53 25.6219 28.7483L30.4752 24.5833C31.3852 23.8017 32.8552 23.8017 33.7652 24.5833L35.6669 26.2167"
-                                                stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                        <div class="img-ingo">
-                                            <span class="text-[#075E66] font-medium">image 12</span>
-                                            <hr class="text-[#075E66]">
-                                            <span class="text-[#86909C] font-medium">MP 1.5</span>
-                                        </div>
-                                    </div>
-                                    <svg class="absolute left-3 top-5.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                        xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
-                                        fill="none">
-                                        <path
-                                            d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </div>
-                                <div class="flex flex-col gap-2.5 w-full">
-                                    <span class="text-[#1D2129]">صورة العرض</span>
-                                    <div
-                                        class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            viewBox="0 0 48 48" fill="none">
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
-                                            </rect>
-                                            <path
-                                                d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
-                                                fill="white"></path>
-                                        </svg>
-                                        <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
-                                            جهازك</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col gap-2">
-                                    <label class="text-[#1D2129]">عن البرنامج</label>
-                                    <p class="border border-gray-200 rounded-lg p-4 text-[#1D2129] font-light">
-                                        التعامل مع الحزن والإحباط يتطلب الاعتراف بالمشاعر والتعبير عنها بطرق صحية، مثل
-                                        التحدث مع
-                                        صديق أو كتابة ما نشعر به. يمكن
-                                        لممارسة التأمل والاسترخاء، العناية بالنوم والتغذية الصحية، والنشاط البدني
-                                        المنتظم أن
-                                        تخفف من هذه المشاعر. التركيز على
-                                        الأشياء الإيجابية، البحث عن دعم اجتماعي، والقيام بالأنشطة المحببة يساعد أيضاً في
-                                        تحسين
-                                        المزاج وتقليل الحزن والإحباط.
-                                        بهذه الطرق، يمكن تعزيز الصحة النفسية والعاطفية والتغلب على التحديات اليومية...
-                                    </p>
-                                </div>
-                                <div class="flex flex-col items-start gap-3 w-full relative">
-                                    <label for="" class="text-[#1D2129]">عدد الجلسات</label>
-                                    <input value="8 جلسات"
-                                        class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:ring-0"
-                                        readonly>
-
-                                </div>
-                                <div class="flex flex-col items-start gap-3 w-full ">
-                                    <label for="" class="text-[#1D2129]">أهداف البرنامج</label>
-                                    <div
-                                        class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
-                                        <span>توفير أدوات ومهارات للمشاركين لمواجهة التحديات الشخصية والمهنية
-                                            بفعالية.</span>
-                                        <svg class="absolute left-3 top-1.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
-                                        <span>تعزيز قدرة المشاركين على التعبير عن أنفسهم والتفاعل الإيجابي مع
-                                            الآخرين.</span>
-                                        <svg class="absolute left-3 top-1.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
-                                        <span>تحفيز المشاركين على استكشاف وفهم أنماط سلوكهم وتعزيز تطوير الذات والتحسين
-                                            المستمر.</span>
-                                        <svg class="absolute left-3 top-1.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
-                                        <span>تقديم مهارات عملية وعميقة لتحقيق التوازن بين الحياة الشخصية والمهنية
-                                            وتعزيز
-                                            العلاقات الاجتماعية.</span>
-                                        <svg class="absolute left-3 top-1.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </div>
-                                    <div class="flex flex-row items-center gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none">
-                                            <path d="M5 10H15" stroke="#1D2129" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M10 15V5" stroke="#1D2129" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        <span class="text-[#1D2129] font-medium text-base">إضافة هدف</span>
-                                    </div>
-
-                                </div>
-                                <button id=""
-                                    class="bg-[#81C6C3] w-36 flex flex-row justify-center items-center gap-2 h-10 border border-[#81C6C3] rounded-lg text-white font-medium text-sm cursor-pointer  transition-all duration-300 active:scale-95">
-                                    حفظ
-                                </button>
-                            </section>
-
-                            <div class="mt-4 pr-6 pl-6 relative">
-                                <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">محتوى البرنامج</h1>
+                            <svg class="absolute left-3 top-5.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                fill="none">
+                                <path
+                                    d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                    stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col gap-2.5 w-full">
+                            <span class="text-[#1D2129]">صورة العرض</span>
+                            <div
+                                class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
+                                    </rect>
+                                    <path
+                                        d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
+                                        fill="white"></path>
+                                </svg>
+                                <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
+                                    جهازك</span>
                             </div>
-                            <section
-                                class="bg-white w-full p-6 border border-[#E5E6EB] rounded-b-xl overflow-x-auto flex flex-col gap-4">
-                                <div class="flex flex-col gap-4 border border-[#81C6C3] p-6 rounded-xl">
-                                    <span class="text-[#075E66] font-bold text-lg">الجلسة الأولى</span>
-                                    <div class="flex flex-col items-start gap-3 w-full relative">
-                                        <label for="" class="text-[#1D2129]">عنوان الجلسة</label>
-                                        <input value="المقدمة"
-                                            class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:ring-0"
-                                            readonly>
+                        </div>
+                        <div class="flex flex-col gap-2.5 w-full">
+                            <span class="text-[#1D2129]">عن البرامج</span>
+                            <textarea name="" id="" cols="30" rows="5"
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text resize-none text-start">التعامل مع الحزن والإحباط يتطلب الاعتراف بالمشاعر والتعبير عنها بطرق صحية، مثل التحدث مع صديق أو كتابة ما نشعر به. يمكن
+ لممارسة التأمل والاسترخاء، العناية بالنوم والتغذية الصحية، والنشاط البدني المنتظم أن تخفف من هذه المشاعر. التركيز على
+ الأشياء الإيجابية، البحث عن دعم اجتماعي، والقيام بالأنشطة المحببة يساعد أيضاً في تحسين المزاج وتقليل الحزن والإحباط.
+ بهذه الطرق، يمكن تعزيز الصحة النفسية والعاطفية والتغلب على التحديات اليومية.</textarea>
+                        </div>
+                        <div class="flex flex-col items-start gap-3 w-full relative">
+                            <label for="" class="text-[#1D2129]">عدد الجلسات</label>
+                            <input value="8 جلسات"
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
+                        
+                        </div>
+                        <div class="flex flex-col items-start gap-3 w-full ">
+                            <label for="" class="text-[#1D2129]">أهداف البرنامج</label>
+                            <div
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
+                                <span>توفير أدوات ومهارات للمشاركين لمواجهة التحديات الشخصية والمهنية
+                                    بفعالية.
+                                </span>
+                                <svg class="absolute left-3 top-1.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
 
-                                    </div>
-                                    <div
-                                        class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
-                                        <div class="flex flex-row gap-2.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                                viewBox="0 0 48 48" fill="none">
-                                                <rect width="48" height="48" rx="6" fill="#F2F3F5" />
-                                                <path
-                                                    d="M24.6185 33.8234H17.2452C13.5585 33.8234 12.3335 31.3734 12.3335 28.9118V19.0884C12.3335 15.4018 13.5585 14.1768 17.2452 14.1768H24.6185C28.3052 14.1768 29.5302 15.4018 29.5302 19.0884V28.9118C29.5302 32.5984 28.2935 33.8234 24.6185 33.8234Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M32.7731 29.9502L29.5298 27.6752V20.3135L32.7731 18.0385C34.3598 16.9302 35.6665 17.6068 35.6665 19.5552V28.4452C35.6665 30.3935 34.3598 31.0702 32.7731 29.9502Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M23.4165 22.833C24.383 22.833 25.1665 22.0495 25.1665 21.083C25.1665 20.1165 24.383 19.333 23.4165 19.333C22.45 19.333 21.6665 20.1165 21.6665 21.083C21.6665 22.0495 22.45 22.833 23.4165 22.833Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                            <div class="img-ingo">
-                                                <span class="text-[#075E66] font-medium">Video1</span>
-                                                <hr class="text-[#075E66]">
-                                                <span class="text-[#86909C] font-medium">MP 1.5</span>
-                                            </div>
-                                        </div>
-                                        <svg class="absolute left-3 top-5.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                            </path>
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div
-                                        class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            viewBox="0 0 48 48" fill="none">
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
-                                            </rect>
-                                            <path
-                                                d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
-                                                fill="white"></path>
-                                        </svg>
-                                        <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
-                                            جهازك</span>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label class="text-[#1D2129]">عن الجلسة</label>
-                                        <p class="border border-gray-200 rounded-lg p-4 text-[#1D2129] font-light">
-                                            التعامل مع الحزن والإحباط يتطلب الاعتراف بالمشاعر والتعبير عنها بطرق صحية،
-                                            مثل
-                                            التحدث مع
-                                            صديق أو كتابة ما نشعر به. يمكن
-                                            لممارسة التأمل والاسترخاء، العناية بالنوم والتغذية الصحية، والنشاط البدني
-                                            المنتظم أن
-                                            تخفف من هذه المشاعر. التركيز على
-                                            الأشياء الإيجابية، البحث عن دعم اجتماعي، والقيام بالأنشطة المحببة يساعد
-                                            أيضاً في
-                                            تحسين
-                                            المزاج وتقليل الحزن والإحباط.
-                                            بهذه الطرق، يمكن تعزيز الصحة النفسية والعاطفية والتغلب على التحديات
-                                            اليومية...
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col gap-4 border border-[#81C6C3] p-6 rounded-xl">
-                                    <span class="text-[#075E66] font-bold text-lg">الجلسة الثانية</span>
-                                    <div class="flex flex-col items-start gap-3 w-full relative">
-                                        <label for="" class="text-[#1D2129]">عنوان الجلسة</label>
-                                        <input value="المقدمة"
-                                            class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:ring-0"
-                                            readonly>
-
-                                    </div>
-                                    <div
-                                        class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
-                                        <div class="flex flex-row gap-2.5">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                                viewBox="0 0 48 48" fill="none">
-                                                <rect width="48" height="48" rx="6" fill="#F2F3F5" />
-                                                <path
-                                                    d="M24.6185 33.8234H17.2452C13.5585 33.8234 12.3335 31.3734 12.3335 28.9118V19.0884C12.3335 15.4018 13.5585 14.1768 17.2452 14.1768H24.6185C28.3052 14.1768 29.5302 15.4018 29.5302 19.0884V28.9118C29.5302 32.5984 28.2935 33.8234 24.6185 33.8234Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M32.7731 29.9502L29.5298 27.6752V20.3135L32.7731 18.0385C34.3598 16.9302 35.6665 17.6068 35.6665 19.5552V28.4452C35.6665 30.3935 34.3598 31.0702 32.7731 29.9502Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M23.4165 22.833C24.383 22.833 25.1665 22.0495 25.1665 21.083C25.1665 20.1165 24.383 19.333 23.4165 19.333C22.45 19.333 21.6665 20.1165 21.6665 21.083C21.6665 22.0495 22.45 22.833 23.4165 22.833Z"
-                                                    stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                            <div class="img-ingo">
-                                                <span class="text-[#075E66] font-medium">Video1</span>
-                                                <hr class="text-[#075E66]">
-                                                <span class="text-[#86909C] font-medium">MP 1.5</span>
-                                            </div>
-                                        </div>
-                                        <svg class="absolute left-3 top-5.5 transition-all duration-300
-                                                                                                                                 active:scale-95"
-                                            xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            viewBox="0 0 28 28" fill="none">
-                                            <path
-                                                d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
-                                                stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round">
-                                            </path>
-                                            <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                            <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div
-                                        class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                            viewBox="0 0 48 48" fill="none">
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
-                                            <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
-                                            </rect>
-                                            <path
-                                                d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
-                                                fill="white"></path>
-                                        </svg>
-                                        <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
-                                            جهازك</span>
-                                    </div>
-                                    <div class="flex flex-col gap-2">
-                                        <label class="text-[#1D2129]">عن الجلسة</label>
-                                        <p class="border border-gray-200 rounded-lg p-4 text-[#1D2129] font-light">
-                                            التعامل مع الحزن والإحباط يتطلب الاعتراف بالمشاعر والتعبير عنها بطرق صحية،
-                                            مثل
-                                            التحدث مع
-                                            صديق أو كتابة ما نشعر به. يمكن
-                                            لممارسة التأمل والاسترخاء، العناية بالنوم والتغذية الصحية، والنشاط البدني
-                                            المنتظم أن
-                                            تخفف من هذه المشاعر. التركيز على
-                                            الأشياء الإيجابية، البحث عن دعم اجتماعي، والقيام بالأنشطة المحببة يساعد
-                                            أيضاً في
-                                            تحسين
-                                            المزاج وتقليل الحزن والإحباط.
-                                            بهذه الطرق، يمكن تعزيز الصحة النفسية والعاطفية والتغلب على التحديات
-                                            اليومية...
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-row items-center gap-2.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none">
-                                            <path d="M5 10H15" stroke="#1D2129" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                            <path d="M10 15V5" stroke="#1D2129" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                            </path>
-                                        </svg>
-                                        <span class="text-[#1D2129] font-medium text-base">إضافة هدف</span>
-                                    </div>
-                                </div>
-                                <button id=""
-                                    class="bg-[#81C6C3] w-36 flex flex-row justify-center items-center gap-2 h-10 border border-[#81C6C3] rounded-lg text-white font-medium text-sm cursor-pointer  transition-all duration-300 active:scale-95">
-                                    حفظ
-                                </button>
-                            </section>
-
-                            <div class="btns flex flex-row justify-center items-center gap-5 mt-8">
-                                <button
-                                    class="group h-10 w-28 md:w-48 flex flex-row justify-center items-center gap-1 md:gap-2.5 bg-[#075E66]
-                                                                                                                                                    rounded-full
-                                                                                                                                                    transition-all duration-300
-                                                                                                                                                     active:scale-95 cursor-pointer">
-                                    <svg class="hidden md:block transition-transform duration-300 ease-in-out group-hover:translate-x-1 xmlns="
-                                        http:="" www.w3.org="" 2000="" svg"="" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M12.89 5.87988H5.10999C3.39999 5.87988 2 7.27987 2 8.98987V20.3499C2 21.7999 3.04 22.4199 4.31 21.7099L8.23999 19.5199C8.65999 19.2899 9.34 19.2899 9.75 19.5199L13.68 21.7099C14.95 22.4199 15.99 21.7999 15.99 20.3499V8.98987C16 7.27987 14.6 5.87988 12.89 5.87988Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path
-                                            d="M16 8.98987V20.3499C16 21.7999 14.96 22.4099 13.69 21.7099L9.76001 19.5199C9.34001 19.2899 8.65999 19.2899 8.23999 19.5199L4.31 21.7099C3.04 22.4099 2 21.7999 2 20.3499V8.98987C2 7.27987 3.39999 5.87988 5.10999 5.87988H12.89C14.6 5.87988 16 7.27987 16 8.98987Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path
-                                            d="M22 5.10999V16.47C22 17.92 20.96 18.53 19.69 17.83L16 15.77V8.98999C16 7.27999 14.6 5.88 12.89 5.88H8V5.10999C8 3.39999 9.39999 2 11.11 2H18.89C20.6 2 22 3.39999 22 5.10999Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </svg>
-                                    <svg class="md:hidden transition-transform duration-300 ease-in-out group-hover:translate-x-1 xmlns="
-                                        http:="" www.w3.org="" 2000="" svg"="" width="18" height="18"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M12.89 5.87988H5.10999C3.39999 5.87988 2 7.27987 2 8.98987V20.3499C2 21.7999 3.04 22.4199 4.31 21.7099L8.23999 19.5199C8.65999 19.2899 9.34 19.2899 9.75 19.5199L13.68 21.7099C14.95 22.4199 15.99 21.7999 15.99 20.3499V8.98987C16 7.27987 14.6 5.87988 12.89 5.87988Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path
-                                            d="M16 8.98987V20.3499C16 21.7999 14.96 22.4099 13.69 21.7099L9.76001 19.5199C9.34001 19.2899 8.65999 19.2899 8.23999 19.5199L4.31 21.7099C3.04 22.4099 2 21.7999 2 20.3499V8.98987C2 7.27987 3.39999 5.87988 5.10999 5.87988H12.89C14.6 5.87988 16 7.27987 16 8.98987Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path
-                                            d="M22 5.10999V16.47C22 17.92 20.96 18.53 19.69 17.83L16 15.77V8.98999C16 7.27999 14.6 5.88 12.89 5.88H8V5.10999C8 3.39999 9.39999 2 11.11 2H18.89C20.6 2 22 3.39999 22 5.10999Z"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                    </svg>
-
-
-
-                                    <span class="font-medium text-xs md:text-lg text-white">
-                                        حفظ التعديلات
-                                    </span>
-                                </button>
-                                <button
-                                    class="group h-10 w-28 md:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-1 md:gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
-                                    <svg class="hidden md:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path
-                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                    <svg class="md:hidden transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-                                        xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path
-                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                        </path>
-                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#F53F3F" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                    <span class="font-medium text-xs md:text-lg text-[#F53F3F]">حذف البرنامج</span>
-                                </button>
                             </div>
-                            <!-- <div class="btns flex flex-row justify-center items-center gap-5 mt-8">
+                            <div
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
+                                <span>تعزيز قدرة المشاركين على التعبير عن أنفسهم والتفاعل الإيجابي مع
+                                    الآخرين.
+                                </span>
+                                <svg class="absolute left-3 top-1.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <div
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
+                                <span>تحفيز المشاركين على استكشاف وفهم أنماط سلوكهم وتعزيز تطوير الذات والتحسين
+                                    المستمر.
+                                </span>
+                                <svg class="absolute left-3 top-1.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <div
+                                class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 relative">
+                                <span>تقديم مهارات عملية وعميقة لتحقيق التوازن بين الحياة الشخصية والمهنية
+                                    وتعزيز
+                                    العلاقات الاجتماعية.
+                                </span>
+                                <svg class="absolute left-3 top-1.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <div class="flex flex-row items-center gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M5 10H15" stroke="#1D2129" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10 15V5" stroke="#1D2129" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="text-[#1D2129] font-medium text-base">إضافة هدف</span>
+                            </div>
+
+                        </div>
+                        <button id=""
+                            class="bg-[#81C6C3] w-36 flex flex-row justify-center items-center gap-2 h-10 border border-[#81C6C3] rounded-lg text-white font-medium text-sm cursor-pointer  transition-all duration-300 active:scale-95">
+                            حفظ
+                        </button>
+                    </section>
+
+                    <div class="mt-4 pr-6 pl-6 relative">
+                        <h1 class="font-bold text-lg sm:text-xl text-[#86909C]">محتوى البرنامج</h1>
+                    </div>
+
+                    <section
+                        class="bg-white w-full p-6 border border-[#E5E6EB] rounded-b-xl overflow-x-auto flex flex-col gap-4">
+                        <div class="flex flex-col gap-4 border border-[#81C6C3] p-6 rounded-xl">
+                            <span class="text-[#075E66] font-bold text-lg">الجلسة الأولى</span>
+                            <div class="flex flex-col items-start gap-3 w-full relative">
+                                <label for="" class="text-[#1D2129]">عنوان الجلسة</label>
+                                <input value="المقدمة"
+                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
+                            
+                            </div>
+                            <div
+                                class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
+                                <div class="flex flex-row gap-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                        fill="none">
+                                        <rect width="48" height="48" rx="6" fill="#F2F3F5" />
+                                        <path
+                                            d="M24.6185 33.8234H17.2452C13.5585 33.8234 12.3335 31.3734 12.3335 28.9118V19.0884C12.3335 15.4018 13.5585 14.1768 17.2452 14.1768H24.6185C28.3052 14.1768 29.5302 15.4018 29.5302 19.0884V28.9118C29.5302 32.5984 28.2935 33.8234 24.6185 33.8234Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M32.7731 29.9502L29.5298 27.6752V20.3135L32.7731 18.0385C34.3598 16.9302 35.6665 17.6068 35.6665 19.5552V28.4452C35.6665 30.3935 34.3598 31.0702 32.7731 29.9502Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M23.4165 22.833C24.383 22.833 25.1665 22.0495 25.1665 21.083C25.1665 20.1165 24.383 19.333 23.4165 19.333C22.45 19.333 21.6665 20.1165 21.6665 21.083C21.6665 22.0495 22.45 22.833 23.4165 22.833Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <div class="img-ingo">
+                                        <span class="text-[#075E66] font-medium">Video1</span>
+                                        <hr class="text-[#075E66]">
+                                        <span class="text-[#86909C] font-medium">MP 1.5</span>
+                                    </div>
+                                </div>
+                                <svg class="absolute left-3 top-5.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div
+                                class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
+                                    </rect>
+                                    <path
+                                        d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
+                                        fill="white"></path>
+                                </svg>
+                                <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
+                                    جهازك</span>
+                            </div>
+                            <div class="flex flex-col gap-2.5 w-full">
+                                <span class="text-[#1D2129]">عن الجلسة</span>
+                                <textarea name="" id="" cols="30" rows="5"
+                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text resize-none text-start">نبذة مختصرة عن ماذا سوف تتعلم في هذه الدورة</textarea>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 border border-[#81C6C3] p-6 rounded-xl">
+                            <span class="text-[#075E66] font-bold text-lg">الجلسة الثانية</span>
+                            <div class="flex flex-col items-start gap-3 w-full relative">
+                                <label for="" class="text-[#1D2129]">عنوان الجلسة</label>
+                                <input value="المقدمة"
+                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text">
+                            
+                            </div>
+                            <div
+                                class="flex flex-row justify-between items-center border border-[#E5E6EB] rounded-sm p-2.5 relative ">
+                                <div class="flex flex-row gap-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                        fill="none">
+                                        <rect width="48" height="48" rx="6" fill="#F2F3F5" />
+                                        <path
+                                            d="M24.6185 33.8234H17.2452C13.5585 33.8234 12.3335 31.3734 12.3335 28.9118V19.0884C12.3335 15.4018 13.5585 14.1768 17.2452 14.1768H24.6185C28.3052 14.1768 29.5302 15.4018 29.5302 19.0884V28.9118C29.5302 32.5984 28.2935 33.8234 24.6185 33.8234Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M32.7731 29.9502L29.5298 27.6752V20.3135L32.7731 18.0385C34.3598 16.9302 35.6665 17.6068 35.6665 19.5552V28.4452C35.6665 30.3935 34.3598 31.0702 32.7731 29.9502Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M23.4165 22.833C24.383 22.833 25.1665 22.0495 25.1665 21.083C25.1665 20.1165 24.383 19.333 23.4165 19.333C22.45 19.333 21.6665 20.1165 21.6665 21.083C21.6665 22.0495 22.45 22.833 23.4165 22.833Z"
+                                            stroke="#86909C" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <div class="img-ingo">
+                                        <span class="text-[#075E66] font-medium">Video1</span>
+                                        <hr class="text-[#075E66]">
+                                        <span class="text-[#86909C] font-medium">MP 1.5</span>
+                                    </div>
+                                </div>
+                                <svg class="absolute left-3 top-5.5 transition-all duration-300
+                                                                                                                                    active:scale-95"
+                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                    fill="none">
+                                    <path
+                                        d="M14.0002 25.6663C20.4168 25.6663 25.6668 20.4163 25.6668 13.9997C25.6668 7.58301 20.4168 2.33301 14.0002 2.33301C7.5835 2.33301 2.3335 7.58301 2.3335 13.9997C2.3335 20.4163 7.5835 25.6663 14.0002 25.6663Z"
+                                        stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div
+                                class="border border-[#C9CDD4] border-dashed w-full flex flex-col items-center gap-2.5 rounded-md  pt-4 pb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" fill="#81C6C3"></rect>
+                                    <rect x="0.5" y="0.5" width="47" height="47" rx="7.5" stroke="#075E66">
+                                    </rect>
+                                    <path
+                                        d="M23 28V19.85L20.4 22.45L19 21L24 16L29 21L27.6 22.45L25 19.85V28H23ZM18 32C17.45 32 16.9792 31.8042 16.5875 31.4125C16.1958 31.0208 16 30.55 16 30V27H18V30H30V27H32V30C32 30.55 31.8042 31.0208 31.4125 31.4125C31.0208 31.8042 30.55 32 30 32H18Z"
+                                        fill="white"></path>
+                                </svg>
+                                <span class="text-[#4E5969] text-base">اسحب الملف هنا أو قم باستعراض الملفات في
+                                    جهازك</span>
+                            </div>
+                            <div class="flex flex-col gap-2.5 w-full">
+                                <span class="text-[#1D2129]">عن الجلسة</span>
+                                <textarea name="" id="" cols="30" rows="5"
+                                    class=" text-[#1D2129] font-light border border-[#E5E6EB] rounded-md w-full py-2 px-3 focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 cursor-text resize-none text-start">نبذة مختصرة عن ماذا سوف تتعلم في هذه الدورة</textarea>
+                            </div>
+                            <div class="flex flex-row items-center gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M5 10H15" stroke="#1D2129" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M10 15V5" stroke="#1D2129" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                <span class="text-[#1D2129] font-medium text-base">إضافة هدف</span>
+                            </div>
+                        </div>
+                        <button id=""
+                            class="bg-[#81C6C3] w-36 flex flex-row justify-center items-center gap-2 h-10 border border-[#81C6C3] rounded-lg text-white font-medium text-sm cursor-pointer  transition-all duration-300 active:scale-95">
+                            حفظ
+                        </button>
+                    </section>
+
+                    <div class="btns flex flex-row justify-center items-center gap-5 mt-8">
                         <button
-                            class="group h-10 w-48 flex flex-row justify-center items-center gap-2.5 bg-[#075E66]
-                                                                                                                                    rounded-full
-                                                                                                                                    transition-all duration-300
-                                                                                                                                     active:scale-95 cursor-pointer">
-                            <svg class="transition-transform duration-300 ease-in-out group-hover:translate-x-1 xmlns="
+                            class="group h-10 w-28 md:w-48 flex flex-row justify-center items-center gap-1 md:gap-2.5 bg-[#075E66]
+                                                                                                                                                        rounded-full
+                                                                                                                                                        transition-all duration-300
+                                                                                                                                                        active:scale-95 cursor-pointer">
+                            <svg class="hidden md:block transition-transform duration-300 ease-in-out group-hover:translate-x-1 xmlns="
                                 http:="" www.w3.org="" 2000="" svg"="" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
                                 <path
@@ -1140,14 +1026,32 @@
                                     stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 </path>
                             </svg>
+                            <svg class="md:hidden transition-transform duration-300 ease-in-out group-hover:translate-x-1 xmlns="
+                                http:="" www.w3.org="" 2000="" svg"="" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12.89 5.87988H5.10999C3.39999 5.87988 2 7.27987 2 8.98987V20.3499C2 21.7999 3.04 22.4199 4.31 21.7099L8.23999 19.5199C8.65999 19.2899 9.34 19.2899 9.75 19.5199L13.68 21.7099C14.95 22.4199 15.99 21.7999 15.99 20.3499V8.98987C16 7.27987 14.6 5.87988 12.89 5.87988Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M16 8.98987V20.3499C16 21.7999 14.96 22.4099 13.69 21.7099L9.76001 19.5199C9.34001 19.2899 8.65999 19.2899 8.23999 19.5199L4.31 21.7099C3.04 22.4099 2 21.7999 2 20.3499V8.98987C2 7.27987 3.39999 5.87988 5.10999 5.87988H12.89C14.6 5.87988 16 7.27987 16 8.98987Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M22 5.10999V16.47C22 17.92 20.96 18.53 19.69 17.83L16 15.77V8.98999C16 7.27999 14.6 5.88 12.89 5.88H8V5.10999C8 3.39999 9.39999 2 11.11 2H18.89C20.6 2 22 3.39999 22 5.10999Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
 
-                            <span class="font-medium text-lg text-white">
+
+
+                            <span class="font-medium text-xs md:text-lg text-white">
                                 حفظ التعديلات
                             </span>
                         </button>
                         <button
-                            class="group h-10 w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
-                            <svg class="transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+                            class="group h-10 w-28 md:w-48 flex flex-row justify-center items-center border border-[#F53F3F] rounded-full gap-1 md:gap-2.5 transition-all duration-300 active:scale-95 cursor-pointer">
+                            <svg class="hidden md:block transition-transform duration-300 ease-in-out group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
                                 <path
@@ -1159,15 +1063,29 @@
                                 <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#F53F3F" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
-                            <span class="font-medium text-lg text-[#F53F3F]">حذف البرنامج</span>
+                            <svg class="md:hidden transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                    stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#F53F3F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#F53F3F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <span class="font-medium text-xs md:text-lg text-[#F53F3F]">حذف البرنامج</span>
                         </button>
-                    </div> -->
+                    </div>
+                </div>
             </main>
         </div>
     </div>
 
 
-
+    <!-- tom-select -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 

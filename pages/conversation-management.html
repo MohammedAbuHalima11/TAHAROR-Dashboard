@@ -4,6 +4,13 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Flatpickr Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- tom-select -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -787,7 +794,7 @@
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
                                                 <button
-                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    class="delete-row-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#F76560]">حذف</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                         viewBox="0 0 18 18" fill="none">
@@ -870,7 +877,7 @@
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
                                                 <button
-                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    class="delete-row-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#F76560]">حذف</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                         viewBox="0 0 18 18" fill="none">
@@ -953,7 +960,7 @@
                                                 <hr class="border border-[#E5E6EB] mt-3 mb-3 w-full">
 
                                                 <button
-                                                    class="flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
+                                                    class="delete-row-btn flex flex-row justify-between items-center pr-4 pl-4 w-full cursor-pointer">
                                                     <p class="font-medium text-base text-[#F76560]">حذف</p>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                         viewBox="0 0 18 18" fill="none">
@@ -1038,88 +1045,61 @@
                 </div>
                 <form action="" method="" class="flex flex-col items-start gap-3">
                     <div class="account-opening-date-field flex flex-col items-start gap-3 w-full relative">
-                        <label for="sex" class="text-[#1D2129]">التاريخ</label>
-                        <div
-                            class=" text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none cursor-pointer">
-
-                            <span>من</span>
-                            <span class="absolute left-2 top-12">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.3335 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.6665 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M3.2085 8.33252H18.7918" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path
-                                        d="M19.25 7.79159V15.5833C19.25 18.3333 17.875 20.1666 14.6667 20.1666H7.33333C4.125 20.1666 2.75 18.3333 2.75 15.5833V7.79159C2.75 5.04159 4.125 3.20825 7.33333 3.20825H14.6667C17.875 3.20825 19.25 5.04159 19.25 7.79159Z"
-                                        stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.3869 12.5584H14.3951" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.3869 15.3084H14.3951" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M10.9958 12.5584H11.004" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M10.9958 15.3084H11.004" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M7.6032 12.5584H7.61143" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M7.6032 15.3084H7.61143" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                        <label for="sex" class="text-[#1D2129]">تاريخ فتح الحساب</label>
+                        <div class="date-input flex flex-col items-start gap-3 w-full relative">
+                            <input class="date-picker text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 cursor-pointer placeholder:text-[#86909C] placeholder:font-light focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 flatpickr-input" placeholder="من" type="text" readonly="readonly">
+                            <button class="date-btn absolute left-2 top-1/2 -translate-y-1/2 cursor-pointer">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.3335 1.83325V4.58325" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.6665 1.83325V4.58325" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.2085 8.33252H18.7918" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M19.25 7.79159V15.5833C19.25 18.3333 17.875 20.1666 14.6667 20.1666H7.33333C4.125 20.1666 2.75 18.3333 2.75 15.5833V7.79159C2.75 5.04159 4.125 3.20825 7.33333 3.20825H14.6667C17.875 3.20825 19.25 5.04159 19.25 7.79159Z" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.3869 12.5584H14.3951" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.3869 15.3084H14.3951" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.9958 12.5584H11.004" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.9958 15.3084H11.004" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.6032 12.5584H7.61143" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.6032 15.3084H7.61143" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
-                            </span>
+                            </button>
+                            
                         </div>
-                        <div
-                            class=" text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 cursor-pointer relative">
-
-                            <span>إلى</span>
-                            <span class="absolute left-2 top-3">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.3335 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.6665 1.83325V4.58325" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M3.2085 8.33252H18.7918" stroke="#86909C" stroke-width="1.5"
-                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path
-                                        d="M19.25 7.79159V15.5833C19.25 18.3333 17.875 20.1666 14.6667 20.1666H7.33333C4.125 20.1666 2.75 18.3333 2.75 15.5833V7.79159C2.75 5.04159 4.125 3.20825 7.33333 3.20825H14.6667C17.875 3.20825 19.25 5.04159 19.25 7.79159Z"
-                                        stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.3869 12.5584H14.3951" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.3869 15.3084H14.3951" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M10.9958 12.5584H11.004" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M10.9958 15.3084H11.004" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M7.6032 12.5584H7.61143" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M7.6032 15.3084H7.61143" stroke="#86909C" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                        <div class="date-input flex flex-col items-start gap-3 w-full relative">
+                            <input class="date-picker text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 cursor-pointer placeholder:text-[#86909C] placeholder:font-light focus:outline-none focus:border-[#c0c7c8] focus:right-0.5 transition-all duration-100 flatpickr-input" placeholder="إلى" type="text" readonly="readonly">
+                            <button class="date-btn absolute left-2 top-1/2 -translate-y-1/2 cursor-pointer">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.3335 1.83325V4.58325" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.6665 1.83325V4.58325" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.2085 8.33252H18.7918" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M19.25 7.79159V15.5833C19.25 18.3333 17.875 20.1666 14.6667 20.1666H7.33333C4.125 20.1666 2.75 18.3333 2.75 15.5833V7.79159C2.75 5.04159 4.125 3.20825 7.33333 3.20825H14.6667C17.875 3.20825 19.25 5.04159 19.25 7.79159Z" stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.3869 12.5584H14.3951" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M14.3869 15.3084H14.3951" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.9958 12.5584H11.004" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.9958 15.3084H11.004" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.6032 12.5584H7.61143" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.6032 15.3084H7.61143" stroke="#86909C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
-                            </span>
+                            </button>
+                            
                         </div>
                     </div>
-                    <div class="flex flex-col items-start gap-3 w-full relative">
-                        <label for="sex" class="text-[#1D2129]">حالة المحادثة</label>
-                        <select name="" id=""
-                            class=" text-[#86909C] font-light border border-[#e5ebe5] rounded-md w-full py-2 px-3 appearance-none focus:outline-none focus:ring-1 focus:ring-[#c0c7c8] transition-all duration-300 ease-in-out cursor-pointer">
-
-                            <option value="" disabled="" selected="" hidden="">اختر الحالة</option>
-                        </select>
-                        <span class="absolute left-2 top-12">
-                            <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
-                                    stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </span>
+                    <div class="select-input flex flex-col items-start gap-3 w-full">
+                        <label for="" class="text-[#1D2129]">حالة المحادثة</label>
+                        <div class="relative w-full">
+                            <select class="select-field">
+                                <option value="">اختر الحالة</option>
+                                <option value="option-1">خيار 1</option>
+                                <option value="option-2">خيار 2</option>
+                            </select>
+                            <button class="select-btn absolute left-2 top-1/2 -translate-y-1/2 z-10 cursor-pointer">
+                                <svg width="19" height="19" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.2802 5.96655L8.93355 10.3132C8.42021 10.8266 7.58022 10.8266 7.06688 10.3132L2.72021 5.96655"
+                                        stroke="#86909C" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="btns flex flex-row justify-between w-full">
@@ -1135,11 +1115,59 @@
             </div>
         </div>
         <div
+            class="delete-container hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center overflow-y-auto-auto z-50">
+            <div
+                class="delete-wrapper bg-white shadow-lg rounded-xl  max-h-[99vh] w-full max-w-md mx-4 p-4 pt-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative">
+                <div
+                    class="info sticky top-0 bg-white z-50 w-full shadow-b-lg flex flex-row justify-between items-center pt-5 pb-4">
+                    <div class="flex flex-row items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path
+                                d="M14.0002 25.6673C20.4168 25.6673 25.6668 20.4173 25.6668 14.0007C25.6668 7.58398 20.4168 2.33398 14.0002 2.33398C7.5835 2.33398 2.3335 7.58398 2.3335 14.0007C2.3335 20.4173 7.5835 25.6673 14.0002 25.6673Z"
+                                stroke="#075E66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.6982 17.3026L17.3016 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.3016 17.3026L10.6982 10.6992" stroke="#075E66" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="text-[#075E66] font-medium text-xl">حذف محادثة</p>
+                    </div>
+                    <svg class="close-btn cursor-pointer" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.0002 25.6666C20.4168 25.6666 25.6668 20.4166 25.6668 13.9999C25.6668 7.58325 20.4168 2.33325 14.0002 2.33325C7.5835 2.33325 2.3335 7.58325 2.3335 13.9999C2.3335 20.4166 7.5835 25.6666 14.0002 25.6666Z"
+                            stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M10.6982 17.3016L17.3016 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M17.3016 17.3016L10.6982 10.6982" stroke="#F53F3F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center gap-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                        <path
+                            d="M54 9.5C78.5189 9.5 98.5 29.4811 98.5 54C98.5 78.5189 78.5189 98.5 54 98.5C29.4811 98.5 9.5 78.5189 9.5 54C9.5 29.4811 29.4811 9.5 54 9.5ZM69.4736 38.5264C67.9734 37.0261 65.4964 37.0261 63.9961 38.5264L54 48.5225L44.0039 38.5264C42.5036 37.0261 40.0266 37.0261 38.5264 38.5264C37.0261 40.0266 37.0261 42.5036 38.5264 44.0039L48.5225 54L38.5264 63.9961C37.0261 65.4964 37.0261 67.9734 38.5264 69.4736C39.3 70.2472 40.2843 70.6103 41.2646 70.6104C42.2451 70.6104 43.2302 70.2473 44.0039 69.4736L54 59.4775L63.9961 69.4736C64.7698 70.2473 65.7549 70.6104 66.7354 70.6104C67.7157 70.6103 68.7 70.2472 69.4736 69.4736C70.9739 67.9734 70.9739 65.4964 69.4736 63.9961L59.4775 54L69.4736 44.0039C70.9739 42.5036 70.9739 40.0266 69.4736 38.5264Z"
+                            fill="#F53F3F" stroke="#F53F3F" />
+                    </svg>
+                    <span class="text-[#1D2129] text-lg font-medium">هل أنت متأكد أنك تريد حذف هذه المحادثة</span>
+                    <div class="btns flex flex-row justify-between w-full">
+                        <button
+                            class="bg-[#075E66] rounded-md w-7/12 text-[#FFFFFF] h-10 mt-4 cursor-pointer transition-all duration-300 ease-in-out hover:scale-95">
+                            حذف</button>
+                        <button class="cancel-btn bg-[#F9FAFB] rounded-md w-1/3  text-[#4E5969] h-10 mt-4 cursor-pointer">
+                            إلغاء
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
             class="search-specialist-with-mobile hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full flex items-center justify-center ">
             <div class="bg-white shadow-lg rounded-xl  w-full max-w-md mx-4 ">
                 <div class="info flex flex-row justify-between items-center pt-4 pb-4 w-full p-4">
                     <div class="relative flex-1">
-                        <input type="text" name="search" id="search" placeholder="البحث عن أخصائي..."
+                        <input type="text" name="search" id="search" placeholder="البحث عن عميل..."
                             class="bg-white  w-full h-11 rounded-lg pr-10 pl-3 
                                                                                                                                                placeholder:text-[#86909C] placeholder:font-medium placeholder:text-xs focus:outline-none focus:ring-0 ">
                         <svg class="absolute right-4 top-1/2 -translate-y-1/2 " xmlns="http://www.w3.org/2000/svg"
@@ -1170,6 +1198,10 @@
         <div class="background-with-sidbare hidden lg:hidden fixed inset-0 bg-[#81C6C3]/40 w-full h-full"></div>
 
     </div>
+    <!-- tom-select -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <!-- Flatpickr Library -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 
