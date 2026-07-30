@@ -1468,7 +1468,7 @@ if (treatmentProgramsPage) {
         });
     });
 
-    // واجهة فرز الجلسات
+    // واجهة فرز البرامج
     const filteringBtn = document.getElementById('filtering-btn')
     const treatmentProgramsSortingContainer = document.getElementById('treatment-programs-sorting-container');
     const closeTreatmentProgramsSortingBtn = document.getElementById('close-treatment-programs-sorting-btn');
@@ -1476,11 +1476,13 @@ if (treatmentProgramsPage) {
     filteringBtn.addEventListener('click', function () {
         treatmentProgramsSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     });
 
     closeTreatmentProgramsSortingBtn.addEventListener('click', function () {
         treatmentProgramsSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     });
 
 
@@ -1493,9 +1495,13 @@ if (treatmentProgramsPage) {
 
     searchProgramWithMobileBtn.onclick = () => {
         searchProgramWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeProgramSearchWithMobileBtn.onclick = () => {
         searchProgramWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 }
