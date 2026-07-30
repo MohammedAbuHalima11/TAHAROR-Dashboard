@@ -2061,11 +2061,13 @@ if (document.getElementById('system-notifications-page')) {
     filteringBtn.onclick = () => {
         systemNotificationsSortingContainer.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     };
 
     closeSystemNotificationsSortingBtn.onclick = () => {
         systemNotificationsSortingContainer.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     };
 
 
@@ -2078,9 +2080,13 @@ if (document.getElementById('system-notifications-page')) {
 
     searchSystemNotificationsWithMobileBtn.onclick = () => {
         searchSystemNotificationsWithMobile.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
     closeSystemNotificationsSearchWithMobileBtn.onclick = () => {
         searchSystemNotificationsWithMobile.classList.add('hidden');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }
 
 }
