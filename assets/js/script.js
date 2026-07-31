@@ -2105,9 +2105,17 @@ if (document.querySelector('.select-field')) {
             create: false,
             controlInput: null,
             allowEmptyOption: true,
+
             ...(select.multiple && {
                 plugins: ['remove_button']
-            })
+            }),
+
+            onDropdownOpen(dropdown) {
+                const emptyOption = dropdown.querySelector('.option[data-value=""]');
+                if (emptyOption) {
+                    emptyOption.style.display = 'none';
+                }
+            }
         });
     });
 

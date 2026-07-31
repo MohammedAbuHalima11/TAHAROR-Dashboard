@@ -118,6 +118,10 @@ input[type="checkbox"]:checked::after {
 
 }
 
+.ts-dropdown .ts-dropdown-content .option:first-child {
+    display: none;
+}
+
 
 .ts-dropdown .active {
 
